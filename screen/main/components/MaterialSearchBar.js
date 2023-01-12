@@ -1,41 +1,30 @@
-import React, { Component } from "react";
-import { StyleSheet, Dimensions, View, Text, Image, ImageBackground, TouchableOpacity,ScrollView} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { logoutUser } from "../src/api/authapi";
+import React from "react";
+import { StyleSheet, View, Text, Image, ImageBackground } from "react-native";
+import CupertinoFooter1 from "../components/CupertinoFooter1";
 
-const { width, height } = Dimensions.get('window')
-
-function Main(props) {
-   const navigation=useNavigation();
+function Untitled(props) {
   return (
-    
     <View style={styles.container}>
-        <ScrollView>
       <View style={styles.slEGuideStack}>
-        <View style={styles.firstpart}>
         <Text style={styles.slEGuide}>SL E-GUIDE</Text>
         <Image
-          source={require("../../assets/Images/mainpic.webp")}
-          resizeMode="cover"
+          source={require("../assets/images/Places-In-Sri-Lanka_4th-jun.webp")}
+          resizeMode="contain"
           style={styles.image}
         ></Image>
-        </View>
-        <View style={styles.secondpart}>
         <ImageBackground
           style={styles.rect}
           imageStyle={styles.rect_imageStyle}
-          source={require("../../assets/Images/bg.png")}
+          source={require("../assets/images/Gradient_BsNXNrx.png")}
         >
           <View style={styles.image2Row}>
-          <TouchableOpacity onPress={()=>{navigation.navigate("Places")}}>
             <Image
-              source={require("../../assets/Images/Places.png")}
+              source={require("../assets/images/800x750.png")}
               resizeMode="contain"
               style={styles.image2}
             ></Image>
-            </TouchableOpacity>
             <Image
-              source={require("../../assets/Images/car.png")}
+              source={require("../assets/images/kisspng-car-illustration-computer-icons-vector-graphics-fleet-management-svg-png-icon-free-download-3326-5c56bc1c827ea7.4483266315491881245345.png")}
               resizeMode="contain"
               style={styles.image3}
             ></Image>
@@ -43,12 +32,12 @@ function Main(props) {
           <Text style={styles.places}>Places</Text>
           <View style={styles.image5Row}>
             <Image
-              source={require("../../assets/Images/map.png")}
+              source={require("../assets/images/pngwing.com_(5).png")}
               resizeMode="contain"
               style={styles.image5}
             ></Image>
             <Image
-              source={require("../../assets/Images/fuel.png")}
+              source={require("../assets/images/509-5099430_black-fuel-pump-icon-inside-a-green-circle_(1)_(1).png")}
               resizeMode="contain"
               style={styles.image8}
             ></Image>
@@ -58,15 +47,13 @@ function Main(props) {
             <Text style={styles.fuelStations}>Fuel Stations</Text>
           </View>
           <View style={styles.image4Row}>
-           <TouchableOpacity onPress={()=>{navigation.navigate("Hospital")}}>
             <Image
-              source={require("../../assets/Images/emergency.png")}
+              source={require("../assets/images/imgbin_medical-emergency-medicine-health-care-hospital-png.png")}
               resizeMode="contain"
               style={styles.image4}
             ></Image>
-            </TouchableOpacity>
             <Image
-              source={require("../../assets/Images/guide.png")}
+              source={require("../assets/images/png-clipart-travel-tour-operator-computer-icons-laganas-tour-guide-travel-angle-text_(2)_(1).png")}
               resizeMode="contain"
               style={styles.image9}
             ></Image>
@@ -76,50 +63,42 @@ function Main(props) {
             <Text style={styles.guide}>Guide</Text>
           </View>
         </ImageBackground>
-        </View>
         <Text style={styles.transportServices}>Transport{"\n"} Services</Text>
       </View>
-      <View>
-        <TouchableOpacity onPress={logoutUser} >
-          <Text>Sign out</Text>
-        </TouchableOpacity>
-      </View>
-      </ScrollView>
+      <CupertinoFooter1 style={styles.cupertinoFooter1}></CupertinoFooter1>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    width: "100%",
+    flex: 1
   },
   slEGuide: {
     top: 48,
     position: "absolute",
+    fontFamily: "impact-regular",
     color: "#121212",
     textAlign: "justify",
+    width: 175,
+    height: 65,
     fontSize: 40,
     left: 100
   },
   image: {
     top: 0,
     left: 0,
-    width: width * 1,
-    height: 370,
+    width: 381,
+    height: 319,
     position: "absolute",
     opacity: 0.35
   },
   rect: {
     top: 254,
     left: 0,
-    width: width * 1,
-    height: height*1,
-    position: "absolute",
-    flex:1,
-    resizeMode:"cover",
-
-
+    width: 378,
+    height: 458,
+    position: "absolute"
   },
   rect_imageStyle: {},
   image2: {
@@ -141,7 +120,7 @@ const styles = StyleSheet.create({
   },
   places: {
     color: "#121212",
-    height: 22,
+    height: 14,
     width: 72,
     textAlign: "center",
     fontSize: 18,
@@ -166,7 +145,7 @@ const styles = StyleSheet.create({
   },
   map2: {
     color: "#121212",
-    height: 22,
+    height: 14,
     width: 72,
     textAlign: "center",
     fontSize: 18
@@ -203,17 +182,17 @@ const styles = StyleSheet.create({
   },
   emergency: {
     color: "#121212",
-    height: 22,
+    height: 15,
     width: 100,
     textAlign: "center",
     fontSize: 18
   },
   guide: {
     color: "#121212",
-    height: 22,
+    height: 14,
     width: 72,
-    lineHeight: 18,
     textAlign: "center",
+    lineHeight: 14,
     fontSize: 19,
     marginLeft: 76,
     marginTop: 7
@@ -237,9 +216,13 @@ const styles = StyleSheet.create({
   slEGuideStack: {
     width: 420,
     height: 712,
-    marginTop: 22,
-    flexDirection:"column"
+    marginTop: 22
   },
-})
+  cupertinoFooter1: {
+    height: 49,
+    width: 375,
+    marginTop: -1
+  }
+});
 
-export default Main
+export default Untitled;

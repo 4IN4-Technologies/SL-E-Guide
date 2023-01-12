@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Ambuluwawa() {
 
   const images = [
     'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/60/ff/c5/ambuluwawa-tower-is-the.jpg?w=1200&h=-1&s=1',

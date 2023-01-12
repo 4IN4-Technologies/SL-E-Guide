@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+const Arugambay=()=> {
 
   const images = [
     'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/f8/5f/0f/beach.jpg?w=1200&h=-1&s=1',
@@ -84,3 +84,5 @@ const styles = StyleSheet.create({
     fontSize:40
   }
 });
+
+export default Arugambay;
