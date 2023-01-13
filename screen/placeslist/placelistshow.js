@@ -26,33 +26,41 @@ const Places = ()=>{
 
 <CupertinoSearchBarBasic style={styles.cupertinoSearchBarBasic}> </CupertinoSearchBarBasic>
             
-        <TouchableOpacity onPress={()=>{navigation.navigate("../screen/9arch.js")}}>
+        <TouchableOpacity onPress={()=>{navigation.navigate("NineArch")}}>
         <View style={styles.list}>
         <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/R.71b9061e28a17c4ddc8ead311ee4ee6f?rik=evR3t%2bFaOUokZw&pid=ImgRaw&r=0"}}/>
         <Text style={styles.title}> Nine arch </Text></View>
         </TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("VictoriaPark")}}>
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://i.ytimg.com/vi/REN9NcUkk04/maxresdefault.jpg"}}/>
       <Text style={styles.title}>Victoria park</Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Gregory")}}>
 <View style={styles.list}>
 <Image source={{ width:500,height:300,
         uri:"https://digitaltravelcouple.com/wp-content/uploads/2019/12/places-to-visit-nuwara-eliya-gregory-lake.jpg"}}/>
       <Text style={styles.title}>Lake Gregory</Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Hakgala")}}>
 <View style={styles.list}>
 <Image source={{
         width:500,height:300,
         uri:"https://th.bing.com/th/id/R.3a5937d53d8f9c99df5ed40c3113ff57?rik=HKp1BZuQHxmV0A&pid=ImgRaw&r=0&sres=1&sresct=1"}}/>
 <Text style={styles.title}> Hakgala </Text></View>
+</TouchableOpacity>
+
 
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/R.b38a672d79d302e2bc37d796cc1d5a63?rik=CUKTCipdmE%2faRA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-pTOpQT40HY4%2fUHab9IPsxXI%2fAAAAAAAAABE%2foTVM1PhUWUs%2fs1600%2fSigiriya.jpg&ehk=yRjFpzre8mhcPGQ5wzODCwcEdbMOhStVaPDa%2fHOir4k%3d&risl=&pid=ImgRaw&r=0"}}/>
-<Text style={styles.title}>Sigiriya</Text></View>
+<Text style={styles.title}>Sigiriya</Text>
+</View>
 
 <View style={styles.list}>
 <Image source={{width:500,height:300,

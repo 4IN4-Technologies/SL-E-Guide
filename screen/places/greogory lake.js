@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Gregory() {
 
   const images = [
     'https://www.trawell.in/admin/images/upload/140958556Nuwara_Eliya_Gregory_Lake.jpg',

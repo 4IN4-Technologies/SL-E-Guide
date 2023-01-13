@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Hakgala() {
 
   const images = [
     'https://www.destinationsrilanka.travel/images/hill_Country/Hakgala_Botanical_Garden/01.jpg',

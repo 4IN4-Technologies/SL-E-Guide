@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Bahirawakanda() {
 
   const images = [
     'https://www.lovidhu.com/uploads/posts/2021/05//bahirawakanda-temple-sri-lanka-945x630.jpg',

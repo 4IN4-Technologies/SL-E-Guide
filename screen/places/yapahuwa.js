@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Yapahuwa() {
 
     const images = [
         'https://static.saltinourhair.com/wp-content/uploads/2020/07/23113216/Yapahuwa-Rock-sri-lanka.jpg',

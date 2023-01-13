@@ -12,6 +12,9 @@ import Authload from "../screen/authload/authload";
 import Ambuluwawa from "../screen/places/ambuluwawa";
 import Arugambay from "../screen/places/arugam bay";
 import Hospitallist from "../screen/Hospitals/hospitallist";
+import Koneshwaram from "../screen/places/koneshwaram";
+import NineArch from "../screen/places/ninearch";
+
 
 
 
@@ -33,6 +36,7 @@ export function Authscreens(){
         <Stack.Screen name="Dash" component={Main} options={{headerShown:false}}/>
         <Stack.Screen name="Hospital" component={Hospitallist} options={{headerShown:false}}/>
         <Stack.Screen name="Adam" component={Adam} options={{headerShown:false}}/>
+        <Stack.Screen name="Koneshwaram" component={Koneshwaram} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>

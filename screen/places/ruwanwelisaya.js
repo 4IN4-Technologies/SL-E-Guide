@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Ruwanweliseya() {
 
   const images = [
     'https://www.talesofceylon.com/wp-content/uploads/2020/04/Ruwanweliseya_800x520.jpg',

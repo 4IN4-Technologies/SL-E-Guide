@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function LotusTower() {
 
   const images = [
     'http://www.yamu.lk/wp-content/uploads/2022/10/Image-1.jpg',

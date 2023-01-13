@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function MountLavinia() {
 
   const images = [
     'https://pix10.agoda.net/hotelImages/44543/-1/8186d1484853b65b557da2aec520800c.jpg?ca=7&ce=1&s=1024x768',

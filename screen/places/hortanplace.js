@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Hortan() {
 
   const images = [
     'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/85/1c/01/horton-plains-national.jpg?w=1200&h=-1&s=1',

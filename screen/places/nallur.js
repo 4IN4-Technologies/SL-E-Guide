@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Nallur() {
 
     const images = [
         'https://srilankatravelpages.com/media/2022/07/Nallur-temple-festival-jaffna-2022.jpg',

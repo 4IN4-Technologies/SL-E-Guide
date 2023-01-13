@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function RawanaFalls() {
 
     const images = [
         'https://www.jonnymelon.com/wp-content/uploads/2018/02/P1250066-2-e1518870958124.jpg',

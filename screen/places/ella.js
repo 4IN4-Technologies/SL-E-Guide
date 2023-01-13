@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Ella() {
 
   const images = [
     'http://ruhirutours.lk/wp-content/uploads/2020/03/Blog1_Ruhiru-Tours-scaled.jpg',

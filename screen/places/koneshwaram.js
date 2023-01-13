@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Koneshwaram() {
 
     const images = [
         'https://static.wixstatic.com/media/ba255b_7496b67253b14054beed568a514b80b7~mv2.jpg/v1/fill/w_640,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ba255b_7496b67253b14054beed568a514b80b7~mv2.jpg',

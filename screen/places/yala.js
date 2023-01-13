@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Yala() {
 
     const images = [
         'https://s1.it.atcdn.net/wp-content/uploads/2018/12/yala.jpg',

@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Unawatuna() {
 
   const images = [
     'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/17/f0/2d/20190407-165442-largejpg.jpg?w=1200&h=-1&s=1',
