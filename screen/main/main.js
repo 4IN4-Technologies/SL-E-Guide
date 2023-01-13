@@ -10,6 +10,11 @@ function Main(props) {
   return (
     
     <View style={styles.container}>
+      <ImageBackground
+          style={styles.rect}
+          imageStyle={styles.rect_imageStyle}
+          source={require("../../assets/Images/bg.png")}
+        >
         <ScrollView>
       <View style={styles.slEGuideStack}>
         <View style={styles.firstpart}>
@@ -21,11 +26,7 @@ function Main(props) {
         ></Image>
         </View>
         <View style={styles.secondpart}>
-        <ImageBackground
-          style={styles.rect}
-          imageStyle={styles.rect_imageStyle}
-          source={require("../../assets/Images/bg.png")}
-        >
+       
           <View style={styles.image2Row}>
           <TouchableOpacity onPress={()=>{navigation.navigate("Places")}}>
             <Image
@@ -75,7 +76,6 @@ function Main(props) {
             <Text style={styles.emergency}>Emergency</Text>
             <Text style={styles.guide}>Guide</Text>
           </View>
-        </ImageBackground>
         </View>
         <Text style={styles.transportServices}>Transport{"\n"} Services</Text>
       </View>
@@ -85,13 +85,13 @@ function Main(props) {
         </TouchableOpacity>
       </View>
       </ScrollView>
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     width: "100%",
   },
   slEGuide: {
@@ -106,12 +106,11 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     width: width * 1,
-    height: 370,
+    height: 280,
     position: "absolute",
     opacity: 0.35
   },
   rect: {
-    top: 254,
     left: 0,
     width: width * 1,
     height: height*1,
@@ -135,7 +134,7 @@ const styles = StyleSheet.create({
   image2Row: {
     height: 77,
     flexDirection: "row",
-    marginTop: 42,
+    marginTop: 300,
     marginLeft: 76,
     marginRight: 67
   },

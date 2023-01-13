@@ -55,124 +55,167 @@ const Places = ()=>{
 <Text style={styles.title}> Hakgala </Text></View>
 </TouchableOpacity>
 
-
+<TouchableOpacity onPress={()=>{navigation.navigate("Sigiriya")}}>
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/R.b38a672d79d302e2bc37d796cc1d5a63?rik=CUKTCipdmE%2faRA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-pTOpQT40HY4%2fUHab9IPsxXI%2fAAAAAAAAABE%2foTVM1PhUWUs%2fs1600%2fSigiriya.jpg&ehk=yRjFpzre8mhcPGQ5wzODCwcEdbMOhStVaPDa%2fHOir4k%3d&risl=&pid=ImgRaw&r=0"}}/>
 <Text style={styles.title}>Sigiriya</Text>
 </View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Ambuluwawa")}}>
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/R.de94701ba1b828fc582b9b394169fef3?rik=cJxPi4MMYXUyOg&pid=ImgRaw&r=0"}}/>
 <Text style={styles.title}>Ambuluwawa</Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Ambuluwawa")}}>
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/OIP.Hup-Qjv0KyOj_7jhL210aAHaFj?pid=ImgDet&rs=1"}}/>
 <Text style={styles.title}>Lotus Tower </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Yapahuwa")}}>
 <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://th.bing.com/th/id/R.6a3d835e9bd280e3c279730ed1240387?rik=zVXsfmz10Kclgg&pid=ImgRaw&r=0"}}/>
       <Text style={styles.title}>Yapahuwa </Text></View>
+</TouchableOpacity>      
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Horton")}}>
         <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://duqjpivknq39s.cloudfront.net/2019/03/800x750-94.jpg"}}/>
         <Text style={styles.title}>Hortan Place </Text></View>
+</TouchableOpacity>        
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Arugambay")}}>
        <View style={styles.list}>
 <Image source={{ width:500,height:300,
-        uri:"https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcSdKLvDi01RWrBwUCBj8sxyoHDWRbG_Cd_-rVCzbK4vc4lijte3H5oqpUk-d4zOa29NeFQ&usqp=CAU"}}/>
+        uri:"https://duqjpivknq39s.cloudfront.net/2019/03/800x750-17.jpg"}}/>
       <Text style={styles.title}>Arugambay </Text></View>
-
+</TouchableOpacity>
+      
+<TouchableOpacity onPress={()=>{navigation.navigate("Yala")}}>
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://travelsrilankanews.files.wordpress.com/2020/07/thewayfaress_20200626_2.jpg"}}/>
       <Text style={styles.title}>Yala </Text></View>
+</TouchableOpacity>      
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Udawalawa")}}>
       <View style={styles.list}>
 <Image source={{ width:500,height:300,
         uri:"https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/0b/2a/7c.jpg"}}/>
       <Text style={styles.title}>Udawalawe </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("RawanaFalls")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://tropicalasiatours.com/wp-content/uploads/2020/12/Ravana-Falls6.jpg"}}/>
       <Text style={styles.title}>Rawana falls </Text></View>
+</TouchableOpacity>     
        
        <TouchableOpacity onPress={()=>{navigation.navigate("Adam")}}>
        <View style={styles.list}>
        <Image source={{width:500, height:300,
         uri:"https://images.rove.me/w_1920,q_85/xegmfct9cvwnapnptw1n/sri-lanka-adams-peak-pilgrimage.jpg"}}/>
        <Text style={styles.title}>Adam's peek </Text></View>
-       </TouchableOpacity>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Templetooth")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE57wkmBL8WgtOdBIIfUd7iU2qMgKCM6qjGA&usqp=CAU"}}/>
       <Text style={styles.title}>Temple tooth </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Templetooth")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://srilankawa.lk/wp-content/uploads/2021/12/Mount-Lavinia-Beach-image-1.jpg"}}/>
       <Text style={styles.title}>Mount Lavinia </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Templetooth")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://mahaweli.lk/wp-content/uploads/2022/03/Ella-City-Tour-Mahaweli-1080x530.jpg"}}/>
       <Text style={styles.title}>Ella </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Pinnawala")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://www.travelmapsrilanka.com/img/pinnawala/pinnawala-elephant-orphanage-feeding-elephants.jpg"}}/>
       <Text style={styles.title}>Pinnawala </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Mirissa")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://lh3.googleusercontent.com/pw/ACtC-3c0JWcQpetUuNWYau1SbSVVbt0z-mAfoNV0JHqsMLNmVqepC9SaQOaAKz0o6pYDBUwAN7dyXYA5XnvvxC_kutlpYrtMCiBN-CiGT0sHHLR3oCblAHz_N-JWq1LTdzsmwuWd2tEEzvQDSkX0Vlp0mabM=w496-h620-no?authuser=1"}}/>
       <Text style={styles.title}>Mirissa </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Peradeniya")}}>
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://www.attractionsinsrilanka.com/wp-content/uploads/2019/07/Royal-Botanical-Gardens-Peradeniya.jpg"}}/>
         <Text style={styles.title}>Peradeniya </Text></View>
+</TouchableOpacity>
        
+<TouchableOpacity onPress={()=>{navigation.navigate("Peradeniya")}}> 
        <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://lankalink.info/wp-content/uploads/beauty-of-sinharajaya.jpg"}}/>
       <Text style={styles.title}>Sinharaja </Text></View>
+</TouchableOpacity>      
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Unawatuna")}}> 
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://static.saltinourhair.com/wp-content/uploads/2016/11/23154233/things-to-do-unawatuna-sri-lanka-beach-header.jpg"}}/>
       <Text style={styles.title}>Unawatuna </Text></View>
+</TouchableOpacity> 
 
+<TouchableOpacity onPress={()=>{navigation.navigate("BahirawaKanda")}}> 
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://thatswhatshehad.com/wp-content/uploads/2018/07/bahirawakanda-kandy.jpg"}}/>
       <Text style={styles.title}>Bahirawakanda </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Ruwanweliseya")}}>
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://duqjpivknq39s.cloudfront.net/2018/12/ruwanwelisaya-800x750.jpg"}}/>
       <Text style={styles.title}>Ruwanwalisaya </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Ruwanweliseya")}}>
       <View style={styles.list}>
 <Image source={{ width:500,height:300,
         uri:"https://duqjpivknq39s.cloudfront.net/2018/12/800x750-zoo.jpg"}}/>
       <Text style={styles.title}>Dehiwala Zoo </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("Nallur")}}>
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://www.lakpura.com/images/LK94009771-03-E.JPG"}}/>
       <Text style={styles.title}>Nallur </Text></View>
+</TouchableOpacity>
 
+<TouchableOpacity onPress={()=>{navigation.navigate("JaffnaFort")}}>
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://www.artra.lk/uploads/article/wide/1611191984_wide.jpg"}}/>
       <Text style={styles.title}>Jaffna fort </Text></View>
+</TouchableOpacity>
 
       <View style={styles.list}>
         <TouchableOpacity onPress={()=>{navigation.navigate("Koneshwaram")}}>
@@ -180,12 +223,14 @@ const Places = ()=>{
         uri:"https://duqjpivknq39s.cloudfront.net/2019/01/800x750-16.jpg"}}/>
         </TouchableOpacity>
       <Text style={styles.title}>Koneshwaram </Text></View>
-      
 
+      
+      <TouchableOpacity onPress={()=>{navigation.navigate("Koneshwaram")}}>
       <View style={styles.list}>
 <Image source={{width:500,height:300,
         uri:"https://www.booqify.com/wp-content/uploads/2017/09/Galle-Fort-main-1200x556.jpg"}}/>
       <Text style={styles.title}>Gall fort </Text></View>
+      </TouchableOpacity>
 
       
 </ImageBackground> 

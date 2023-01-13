@@ -1,12 +1,16 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text, ImageBackground } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
+
+
 function placelist(props) {
+  const navigation=useNavigation();
   return (
     <ImageBackground source={require('../../src/bg.png')} style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
-        <TouchableOpacity style={styles.leftIconButton}>
+        <TouchableOpacity onPress={()=>navigation.goBack()} style={styles.leftIconButton}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
           <Text style={styles.leftText}>Back</Text>
         </TouchableOpacity>
