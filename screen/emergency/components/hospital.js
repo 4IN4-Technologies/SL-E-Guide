@@ -1,10 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
-function MaterialButtonPrimary2(props) {
+function HospitalButton(props) {
+  const navigation=useNavigation()
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
-      <Text style={styles.tips}>Tips</Text>
+    <TouchableOpacity style={[styles.container, props.style]} onPress={()=>{navigation.navigate("Hospital")}}>
+      <Text style={styles.hospitalService}>Hospital Service</Text>
     </TouchableOpacity>
   );
 }
@@ -28,10 +30,10 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16
   },
-  tips: {
+  hospitalService: {
     color: "#fff",
     fontSize: 14
   }
 });
 
-export default MaterialButtonPrimary2;
+export default HospitalButton;

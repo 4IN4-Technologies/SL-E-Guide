@@ -5,18 +5,15 @@ import Icon from "react-native-vector-icons/Ionicons";
 
 function CupertinoHeaderWithAddButton(props) {
   const navigation=useNavigation()
-  return (
+    return (
     <View style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
-
         <TouchableOpacity style={styles.leftIconButton} onPress={()=>{navigation.goBack()}}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
         </TouchableOpacity>
       </View>
-
       <View style={styles.textWrapper}>
-        <Text numberOfLines={1} style={styles.emergency}>Emergency</Text>
-
+        <Text numberOfLines={1} style={styles.police}> Tips for trip </Text>
       </View>
     </View>
   );
@@ -28,7 +25,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     paddingRight: 8,
     paddingLeft: 8
-},
+  },
   leftWrapper: {
     flex: 0.14,
     alignItems: "flex-start",
@@ -44,16 +41,17 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     flex: 0.86,
-    marginLeft:50,
+    marginLeft:10,
     marginTop:10,
   },
-  emergency: {
+  police: {
     fontSize: 17,
     lineHeight: 17,
-    marginLeft:50,
+    marginLeft:70,
     marginTop:10,
     color: "#000000"
   }
+  
 });
 
 export default CupertinoHeaderWithAddButton;

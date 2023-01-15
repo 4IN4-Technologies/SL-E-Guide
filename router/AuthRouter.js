@@ -9,6 +9,14 @@ import Places from "../screen/placeslist/placelistshow";
 import Authload from "../screen/authload/authload";
 import Emergency from "../screen/emergency/emergency menu";
 import Hospitallist from "../screen/Hospitals/hospitallist";
+import Guides from "../screen/guides/guides";
+import Fuel from "../screen/fuelstations/fuel";
+import EmergencyContact from "../screen/emergency contacts/emergencycontact";
+import Tips from "../screen/Tips/tips";
+import Hotels from "../screen/hotels/hotels";
+import Transport from "../screen/Transport list/transport";
+import Drivers from "../screen/Drivers/drivers";
+import Vehicles from "../screen/Vehicles/vehicles";
 import {
 Adam, 
 Ambuluwawa,
@@ -42,6 +50,7 @@ Yapahuwa
 
 
 
+
 const Stack = createNativeStackNavigator();
 
 
@@ -58,6 +67,15 @@ export function Authscreens(){
         <Stack.Screen name="Dash" component={Main} options={{headerShown:false}}/>
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown:false}}/>
         <Stack.Screen name="Hospital" component={Hospitallist} options={{headerShown:false}}/>
+        <Stack.Screen name="Guides" component={Guides} options={{headerShown:false}}/>
+        <Stack.Screen name="Fuel" component={Fuel} options={{headerShown:false}}/>
+        <Stack.Screen name="EmergencyContact" component={EmergencyContact} options={{headerShown:false}}/>
+        <Stack.Screen name="Tips" component={Tips} options={{headerShown:false}}/>
+        <Stack.Screen name="Transport" component={Transport} options={{headerShown:false}}/>
+        <Stack.Screen name="Hotels" component={Hotels} options={{headerShown:false}}/>
+        <Stack.Screen name="Drivers" component={Drivers} options={{headerShown:false}}/>
+        <Stack.Screen name="Vehicles" component={Vehicles} options={{headerShown:false}}/>
+
 
 
 

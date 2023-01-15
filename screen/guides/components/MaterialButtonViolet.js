@@ -1,17 +1,28 @@
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, Text,Linking } from "react-native";
 
-function MaterialButtonPrimary1(props) {
+
+
+function MaterialButtonViolet(props,{number}) {
+  function dialcall(number){
+    phoneNo={number}
+
+    phoneNumber = 'tel:${phoneNo}';
+
+    Linking.openURL(phoneNumber);
+}
   return (
-    <TouchableOpacity style={[styles.container, props.style]}>
-      <Text style={styles.hospitalService}>Hospital Service</Text>
+    <TouchableOpacity style={[styles.container, props.style]} onPress={dialcall}>
+      <Text style={styles.bookHere}>Call Now</Text>
     </TouchableOpacity>
   );
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#2196F3",
+    backgroundColor: "rgba(40,152,16,1)",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -28,10 +39,10 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16
   },
-  hospitalService: {
+  bookHere: {
     color: "#fff",
     fontSize: 14
   }
 });
 
-export default MaterialButtonPrimary1;
+export default MaterialButtonViolet;

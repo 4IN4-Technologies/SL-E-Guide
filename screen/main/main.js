@@ -3,7 +3,6 @@ import { StyleSheet, Dimensions, View, Text, Image, ImageBackground, TouchableOp
 import { useNavigation } from "@react-navigation/native";
 import { logoutUser } from "../src/api/authapi";
 
-const { width, height } = Dimensions.get('window')
 
 function Main(props) {
    const navigation=useNavigation();
@@ -35,42 +34,50 @@ function Main(props) {
               style={styles.image2}
             ></Image>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Transport")}}>
             <Image
               source={require("../../assets/Images/car.png")}
               resizeMode="contain"
               style={styles.image3}
             ></Image>
+            </TouchableOpacity>
           </View>
           <Text style={styles.places}>Places</Text>
           <View style={styles.image5Row}>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Hotels")}}>
             <Image
-              source={require("../../assets/Images/map.png")}
+              source={require("../../assets/Images/hotel.png")}
               resizeMode="contain"
               style={styles.image5}
             ></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Fuel")}}>
             <Image
               source={require("../../assets/Images/fuel.png")}
               resizeMode="contain"
               style={styles.image8}
             ></Image>
+            </TouchableOpacity>
           </View>
           <View style={styles.map2Row}>
-            <Text style={styles.map2}>Map</Text>
+            <Text style={styles.map2}>Hotels</Text>
             <Text style={styles.fuelStations}>Fuel Stations</Text>
           </View>
           <View style={styles.image4Row}>
-           <TouchableOpacity onPress={()=>{navigation.navigate("Hospital")}}>
+           <TouchableOpacity onPress={()=>{navigation.navigate("Emergency")}}>
             <Image
               source={require("../../assets/Images/emergency.png")}
               resizeMode="contain"
               style={styles.image4}
             ></Image>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Guides")}}>
             <Image
               source={require("../../assets/Images/guide.png")}
               resizeMode="contain"
               style={styles.image9}
             ></Image>
+            </TouchableOpacity>
           </View>
           <View style={styles.emergencyRow}>
             <Text style={styles.emergency}>Emergency</Text>
@@ -105,15 +112,13 @@ const styles = StyleSheet.create({
   image: {
     top: 0,
     left: 0,
-    width: width * 1,
     height: 280,
     position: "absolute",
     opacity: 0.35
   },
   rect: {
     left: 0,
-    width: width * 1,
-    height: height*1,
+    height:1100,
     position: "absolute",
     flex:1,
     resizeMode:"cover",

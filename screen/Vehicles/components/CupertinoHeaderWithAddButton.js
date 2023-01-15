@@ -1,22 +1,19 @@
-import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
 function CupertinoHeaderWithAddButton(props) {
-  const navigation=useNavigation()
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
-
-        <TouchableOpacity style={styles.leftIconButton} onPress={()=>{navigation.goBack()}}>
+        <TouchableOpacity style={styles.leftIconButton}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
         </TouchableOpacity>
       </View>
-
       <View style={styles.textWrapper}>
-        <Text numberOfLines={1} style={styles.emergency}>Emergency</Text>
-
+        <Text numberOfLines={1} style={styles.vehicle}>
+          Vehicles
+        </Text>
       </View>
     </View>
   );
@@ -47,7 +44,7 @@ const styles = StyleSheet.create({
     marginLeft:50,
     marginTop:10,
   },
-  emergency: {
+  vehicle: {
     fontSize: 17,
     lineHeight: 17,
     marginLeft:50,

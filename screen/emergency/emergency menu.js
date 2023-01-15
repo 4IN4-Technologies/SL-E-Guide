@@ -1,11 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
-import { SafeAreaView,ScrollView,StyleSheet, View, Image, ImageBackground } from "react-native";
+import { SafeAreaView,ScrollView,StyleSheet, View, Image, ImageBackground, Dimensions} from "react-native";
 import CupertinoHeaderWithAddButton from "./components/CupertinoHeaderWithAddButton";
-import HospitalButton from "./components/MaterialButtonPrimary"
-import MaterialButtonPrimary1 from "./components/MaterialButtonPrimary1";
-import MaterialButtonPrimary2 from "./components/MaterialButtonPrimary2";
-import MaterialIconTextButtonsFooter from "./components/MaterialIconTextButtonsFooter";
+import PoliceButton from "./components/police"
+import Tips from "./components/tips";
+import HospitalButton from "./components/hospital";
+
 
 function Emergency() {
     const navigation=useNavigation();
@@ -15,23 +15,17 @@ function Emergency() {
     <View style={styles.container}>
 
       <CupertinoHeaderWithAddButton style={styles.cupertinoHeaderWithAddButton} ></CupertinoHeaderWithAddButton>
-     
-      <ImageBackground source={require('../src/bg.png')}>
+       
+      <ImageBackground source={require('../src/bg.png')} style={styles.bgimg}>
       <Image
         source={require("../src/emergency.png")}
         resizeMode="contain"
         style={styles.image}></Image>
 
-    <TouchableOpacity style={[styles.container, props.style]}>
-      <Text style={styles.policeService}>Police Service</Text>
-    </TouchableOpacity>
-      <MaterialButtonPrimary1 style={styles.materialButtonPrimary1} ></MaterialButtonPrimary1>
-      <MaterialButtonPrimary2 style={styles.materialButtonPrimary2} ></MaterialButtonPrimary2>
+      <PoliceButton style={styles.police}></PoliceButton> 
+      <HospitalButton style={styles.hospital} ></HospitalButton>
+      <Tips style={styles.tips} ></Tips>
 
-      
-      
-      
-      <MaterialIconTextButtonsFooter style={styles.materialIconTextButtonsFooter}></MaterialIconTextButtonsFooter>
       </ImageBackground>
     </View>
     </SafeAreaView>
@@ -55,34 +49,32 @@ const styles = StyleSheet.create({
   image: {
     width: 375,
     height: 200,
-    marginTop: 10
+    marginTop: 20
   },
-  materialButtonPrimary: {
+  police: {
     height: 36,
     width: 296,
     borderRadius: 80,
     marginTop: 198,
     marginLeft: 40
   },
-  materialButtonPrimary1: {
+  hospital: {
     height: 36,
     width: 296,
     borderRadius: 80,
     marginTop: -106,
     marginLeft: 40
   },
-  materialButtonPrimary2: {
+  tips: {
     height: 36,
     width: 296,
     borderRadius: 80,
     marginTop: 100,
     marginLeft: 39
   },
-  materialIconTextButtonsFooter: {
-    height: 60,
-    width: 400,
-    marginBottom:10,
-    marginTop:210
+  bgimg:{
+    height:Dimensions.get('window').height
+
   }
 });
 

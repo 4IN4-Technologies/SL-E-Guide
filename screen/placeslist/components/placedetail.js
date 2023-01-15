@@ -6,7 +6,7 @@ function placedetail(props) {
   return (
      <ImageBackground source={require('../assets/bg.png')} style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
-        <TouchableOpacity style={styles.leftIconButton}>
+        <TouchableOpacity  style={styles.leftIconButton} onPress={()=>{navigation.goBack()}}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
           <Text style={styles.leftText}>Back</Text>
         </TouchableOpacity>
