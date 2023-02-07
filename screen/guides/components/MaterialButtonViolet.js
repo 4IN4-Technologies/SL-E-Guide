@@ -3,16 +3,13 @@ import { StyleSheet, TouchableOpacity, Text,Linking } from "react-native";
 
 
 
-function MaterialButtonViolet(props,{number}) {
-  function dialcall(number){
-    phoneNo={number}
-
-    phoneNumber = 'tel:${phoneNo}';
-
-    Linking.openURL(phoneNumber);
-}
+function MaterialButtonViolet(props) {
+  const {phoneNumber}=props;
+  const handlePress = () => {
+    Linking.openURL(`tel:${phoneNumber}`);
+  };
   return (
-    <TouchableOpacity style={[styles.container, props.style]} onPress={dialcall}>
+    <TouchableOpacity style={[styles.container, props.style]} onPress={handlePress}>
       <Text style={styles.bookHere}>Call Now</Text>
     </TouchableOpacity>
   );

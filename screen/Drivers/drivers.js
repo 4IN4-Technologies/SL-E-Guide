@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { SafeAreaView, ScrollView, StyleSheet, View, Text, ImageBackground,Image } from "react-native";
 import CupertinoHeaderWithAddButton from "./components/CupertinoHeaderWithAddButton";
-import MaterialIconTextButtonsFooter from "./components/MaterialIconTextButtonsFooter";
+import MaterialButtonViolet from "../guides/components/MaterialButtonViolet";
+
 
 function Drivers() {
   return (
@@ -9,67 +10,98 @@ function Drivers() {
 <View style={styles.container}>
 <CupertinoHeaderWithAddButton style={styles.cupertinoHeaderWithAddButton}></CupertinoHeaderWithAddButton>
 <ScrollView>
+
 <ImageBackground source={require('./assets/bg.png')}>  
           
 <View style={styles.list}>
 <Text style={styles.hlist}>Nishantha Jayawardana</Text>
-<Text style={styles.plist}>   
-<Image style={{width:150,height:150,}} source={{uri:"https://th.bing.com/th?id=AwyjLboIyyNbT/Q480x360&rs=1&pid=ImgDet"}}/>  {'\n'}                      
-.                                                       Colombo, Western {'\n'}
-.                                                       +94 77 628 7373{'\n'}
-.                                                       8 Year experience{'\n'}
-.                                                       Available Now
+<View style={styles.detailslist}>
+<Image style={{width:150,height:150,}} source={{uri:"https://th.bing.com/th?id=AwyjLboIyyNbT/Q480x360&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>                    
+Colombo, Western {'\n'}
++94 77 628 7373{'\n'}
+8 Year experience{'\n'}
+Available Now
 </Text>
+<MaterialButtonViolet phoneNumber="+94 77 628 7373" />
 </View>
-
+</View>
+</View>
 
 <View style={styles.list}>
 <Text style={styles.hlist}>Charitha Fernando</Text>
-<Text style={styles.plist}>
-<Image style={{width:150,height:150,alignItems:'center'}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/0f/94/9e/caption.jpg"}}/>{'\n'} 
-.                                                 Kalutara, Jayavardhanapura{'\n'}
-.                                                 +94 71 354 9803{'\n'}
-.                                                 6 Year experience{'\n'}
-.                                                 Available Now</Text>
+<View style={styles.detailslist}>
+<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/0f/94/9e/caption.jpg"}}/>
+<View>
+<Text style={styles.plist}>                    
+Kalutara, {'\n'}
+Jayavardhanapura{'\n'}
++94 71 354 9803{'\n'}
+6 Year experience{'\n'}
+Available Now
+</Text>
+<MaterialButtonViolet phoneNumber="+94 71 354 9803" />
+</View>
+</View>
 </View>
 
 
 <View style={styles.list}>
-<Text style={styles.hlist}> Dinesh Priyantha </Text>
-<Text style={styles.plist}>
-<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/21/be/fb/photo0jpg.jpg"}}/>{'\n'} 
-.                                               Jayanthi Rd, Honnanthara{'\n'}
-.                                               +94 71 219 7939{'\n'}
-.                                               7 Year experience{'\n'}
-.                                               Available Now</Text>
+<Text style={styles.hlist}> Dinesh Priyantha</Text>
+<View style={styles.detailslist}>
+<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/21/be/fb/photo0jpg.jpg"}}/>
+<View>
+<Text style={styles.plist}>                    
+Jayanthi Rd, {'\n'}
+Honnanthara{'\n'}
++94 71 219 7939{'\n'}
+7 Year experience{'\n'}
+Available Now
+</Text>
+<MaterialButtonViolet phoneNumber="+94 71 219 7939" />
 </View>
-
+</View>
+</View>
 
 <View style={styles.list}>
 <Text style={styles.hlist}>Sirimewan Abeysinghe</Text>
-<Text style={styles.plist}>
-<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/fa/fc/32/caption.jpg"}}/>{'\n'} 
-.                                                Kimbulapitiya., Katunayaka{'\n'}
-.                                                +94 77 605 0290{'\n'}
-.                                                12 Year experience{'\n'}
-.                                                Available Now</Text>
+<View style={styles.detailslist}>
+<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/19/fa/fc/32/caption.jpg"}}/>
+<View>
+<Text style={styles.plist}>                    
+Kimbulapitiya,{'\n'}
+Katunayaka{'\n'}
++94 77 605 0290{'\n'}
+12 Year experience{'\n'}
+Available Now
+</Text>
+<MaterialButtonViolet phoneNumber="+94 77 605 0290" />
+</View>
+</View>
 </View>
 
 <View style={styles.list}>
 <Text style={styles.hlist}>Dharshana Bandara</Text>
-<Text style={styles.plist}>
-<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/21/7d/fe/b0/immortal-memories.jpg"}}/> {'\n'}
-.                                                 Katana, Negombo{'\n'}
-.                                                 +94 77 351 1554{'\n'}
-.                                                 5 Year experience{'\n'}
-.                                                 Available Now{'\n'}
-.                                                 VIP Driver</Text>
+<View style={styles.detailslist}>
+<Image style={{width:150,height:150,}} source={{uri:"https://media-cdn.tripadvisor.com/media/photo-s/21/7d/fe/b0/immortal-memories.jpg"}}/>
+<View>
+<Text style={styles.plist}>                    
+Katana, Negombo{'\n'}
++94 77 351 1554{'\n'}
+5 Year experience{'\n'}
+Available Now{'\n'}
+VIP Driver
+</Text>
+<MaterialButtonViolet phoneNumber="+94 77 351 1554" />
 </View>
+</View>
+</View>
+
 
 </ImageBackground>  
 </ScrollView> 
 </View>
-<MaterialIconTextButtonsFooter style={styles.driverfooter}></MaterialIconTextButtonsFooter>    
 </SafeAreaView>
   );
 }
@@ -108,12 +140,13 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     color:'green',
     },
+    detailslist:{
+      marginVertical:30,
+      marginHorizontal:15,
+      flexDirection:"row",
+      justifyContent:"space-between"
+    }
 
-  driverfooter: {
-    height: 60,
-    width: 400,
-    marginTop: 26
-  }
 });
 
 export default Drivers;

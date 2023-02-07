@@ -1,14 +1,19 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity, Text,ImageBackground } from "react-native";
+import { StyleSheet, View, TouchableOpacity, Text,ImageBackground,StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-function placedetail(props) {
+const statusBarHeight = StatusBar.currentHeight;
+
+function Placedetail(props) {
+  const navigation =useNavigation()
+
   return (
-     <ImageBackground source={require('../assets/bg.png')} style={[styles.container, props.style]}>
+    <View style={styles.maincontainer}>
+     <ImageBackground source={require('../../src/bg.png')} style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
         <TouchableOpacity  style={styles.leftIconButton} onPress={()=>{navigation.goBack()}}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
-          <Text style={styles.leftText}>Back</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.textWrapper}>
@@ -17,18 +22,23 @@ function placedetail(props) {
         </Text>
       </View>
     </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  maincontainer:{
+    paddingTop:statusBarHeight
+  },
   container: {
     flexDirection: "row",
     backgroundColor: "#EFEFF4",
     paddingRight: 8,
-    paddingLeft: 8
+    paddingLeft: 8,
+    height:50,
   },
   leftWrapper: {
-    flex: 0.15,
+    flex: 0.10,
     alignItems: "flex-start",
     justifyContent: "center"
   },
@@ -39,22 +49,15 @@ const styles = StyleSheet.create({
     color: "#007AFF",
     fontSize: 32
   },
-  leftText: {
-    alignSelf: "center",
-    fontSize: 17,
-    paddingLeft: 5,
-    color: "#007AFF"
-  },
   textWrapper: {
-    flex: 0.85,
+    flex: 0.90,
     alignItems: "center",
     justifyContent: "center"
   },
   places: {
-    fontSize: 17,
-    lineHeight: 17,
+    fontSize: 25,
     color: "#000"
   }
 });
 
-export default placedetail;
+export default Placedetail;

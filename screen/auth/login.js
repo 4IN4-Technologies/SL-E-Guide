@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React,{useState} from "react";
-import { SafeAreaView, ScrollView ,Text, Image, StyleSheet, View, ImageBackground, StatusBar, TextInput ,TouchableOpacity,Dimensions} from "react-native";
+import { SafeAreaView, ScrollView ,Text, Image, StyleSheet, View, ImageBackground, StatusBar, TextInput ,TouchableOpacity,Dimensions,Alert} from "react-native";
 import {emailValidator} from '../src/helper/emailValidator';
 import {passwordValidator} from '../src/helper/passwordValidator'
 import Toast from "../src/components/Toast";
@@ -22,7 +22,7 @@ const Login = ()=>{
         if (emailError || passwordError) {
           setEmail({ ...email, error: emailError })
           setPassword({ ...password, error: passwordError })
-          return
+          return(Alert.alert(email.error||password.error))
         }
         setLoading(true)
         const response = await loginUser({
@@ -53,16 +53,11 @@ const Login = ()=>{
                     placeholder="Enter email address"
                     label="Email"
                     returnKeyType="next"
-                    value={email.value}
                     onChangeText={(text) => setEmail({ value: text, error: '' })}
-                    error={!!email.error}
-                    errorText={email.error}
                     autoCapitalize="none"
                     autoCompleteType="email"
                     textContentType="emailAddress"
                     keyboardType="email-address"
-
-
                     />
 
                 </View>
@@ -71,7 +66,6 @@ const Login = ()=>{
                     placeholder="Enter password"
                     label="Password"
                     returnKeyType="done"
-                    value={password.value}
                     onChangeText={(text) => setPassword({ value: text, error: '' })}
                     error={!!password.error}
                     errorText={password.error}

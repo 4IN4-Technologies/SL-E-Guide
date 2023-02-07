@@ -10,7 +10,7 @@ function Guides() {
       <View style={styles.rectStackStack}>
         <View style={styles.rectStack}>
           <View style={styles.title}>
-          <Text style={styles.texttitle}>HIRE A SAFTY GUIDE</Text>
+          <Text style={styles.texttitle}>HIRE A SAFETY GUIDE</Text>
           </View>
           <Image
             source={require("./assets/images/A.jpg")}
@@ -45,7 +45,7 @@ function Guides() {
           <Text style={styles.loremIpsum3}>10+ Exp</Text>
           <Text style={styles.topRated}>TOP RATED</Text>
         </View>
-        <MaterialButtonViolet number={"456748"}
+        <MaterialButtonViolet phoneNumber="+94764895686"
           style={styles.materialButtonViolet}
         ></MaterialButtonViolet>
         <MaterialButtonViolet

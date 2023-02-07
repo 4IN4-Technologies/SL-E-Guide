@@ -86,9 +86,10 @@ function Main(props) {
         </View>
         <Text style={styles.transportServices}>Transport{"\n"} Services</Text>
       </View>
-      <View>
+      <View style={styles.signoutContainer}>
+        <Image source={require("../src/signout.png")} style={{height:30,width:35}}/>
         <TouchableOpacity onPress={logoutUser} >
-          <Text>Sign out</Text>
+          <Text style={{fontSize:20}}> Sign out</Text>
         </TouchableOpacity>
       </View>
       </ScrollView>
@@ -100,6 +101,7 @@ function Main(props) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
+    flexDirection:"column"
   },
   slEGuide: {
     top: 48,
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     left: 100
   },
   image: {
-    top: 0,
+    top: -30,
     left: 0,
     height: 280,
     position: "absolute",
@@ -244,6 +246,11 @@ const styles = StyleSheet.create({
     marginTop: 22,
     flexDirection:"column"
   },
+  signoutContainer:{
+    flexDirection:"row",
+    marginTop:60,
+    marginLeft:10,
+  }
 })
 
 export default Main

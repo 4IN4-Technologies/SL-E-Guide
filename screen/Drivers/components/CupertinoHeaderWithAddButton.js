@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
+
+
 
 function CupertinoHeaderWithAddButton(props) {
+  const navigation=useNavigation()
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.leftWrapper}>
-        <TouchableOpacity style={styles.leftIconButton}>
+        <TouchableOpacity style={styles.leftIconButton} onPress={()=>{navigation.goBack()}}>
           <Icon name="ios-arrow-back" style={styles.leftIcon}></Icon>
         </TouchableOpacity>
       </View>
