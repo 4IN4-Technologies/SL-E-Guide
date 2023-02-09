@@ -17,6 +17,7 @@ import Hotels from "../screen/hotels/hotels";
 import Transport from "../screen/Transport list/transport";
 import Drivers from "../screen/Drivers/drivers";
 import Vehicles from "../screen/Vehicles/vehicles";
+import Contactus from "../screen/contact us/contactUs";
 import {
 Adam, 
 Ambuluwawa,
@@ -75,14 +76,16 @@ export function Authscreens(){
         <Stack.Screen name="Hotels" component={Hotels} options={{headerShown:false}}/>
         <Stack.Screen name="Drivers" component={Drivers} options={{headerShown:false}}/>
         <Stack.Screen name="Vehicles" component={Vehicles} options={{headerShown:false}}/>
+        <Stack.Screen name="Contactus" component={Contactus} options={{headerShown:false}}/>
 
 
 
 
         
         <Stack.Screen name="Adam" component={Adam} options={{headerShown:false}}/>
+        <Stack.Screen name="Ambuluwawa" component={Ambuluwawa} options={{headerShown:false}}/>
         <Stack.Screen name="Koneshwaram" component={Koneshwaram} options={{headerShown:false}}/>
-        <Stack.Screen name="Arugambe" component={Arugambay} options={{headerShown:false}}/>
+        <Stack.Screen name="Arugambay" component={Arugambay} options={{headerShown:false}}/>
         <Stack.Screen name="Bahirawakanda" component={Bahirawakanda} options={{headerShown:false}}/>
         <Stack.Screen name="Ella" component={Ella} options={{headerShown:false}}/>
         <Stack.Screen name="GalleFort" component={Gallefort} options={{headerShown:false}}/>

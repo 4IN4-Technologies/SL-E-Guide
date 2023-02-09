@@ -1,10 +1,29 @@
-import React, {Component} from "react";
+import React ,{useState} from "react";
 import { useNavigation } from "@react-navigation/native";
-import { SafeAreaView, ScrollView ,Text, Image, StyleSheet, View, ImageBackground, TextInput ,TouchableOpacity } from "react-native";
+import { SafeAreaView, ScrollView ,Text, Image, StyleSheet, View, ImageBackground, TextInput ,TouchableOpacity,Alert } from "react-native";
+import { emailValidator } from "../src/helper/emailValidator";
+import { sendEmailWithPassword } from "../src/api/authapi";
 
 const Reset = ()=>{
 
+
     const navigation = useNavigation();
+
+    const [email, setEmail] = useState({ value: '', error: '' })
+    const [loading, setLoading] = useState(false)
+    const sendResetPasswordEmail = async () => {
+        const emailError = emailValidator(email.value)
+        if (emailError) {
+          setEmail({ ...email, error: emailError })
+          return
+        }
+        setLoading(true)
+        const response = await sendEmailWithPassword(email.value)
+        if (response.error) {
+          Alert.alert("Response error")
+        }
+        setLoading(false)
+      }
 
 
     return(
@@ -19,9 +38,28 @@ const Reset = ()=>{
                     <Image source={require('../src/reset.png')} style={{width:220 , height: 200}}/>
                 </View>
                 <View style={styles.formInput}>
-                    <TextInput style={styles.textInput} placeholder="Enter email address"/>
+                    <TextInput 
+                    style={styles.textInput} 
+                    placeholder="Enter email address"
+                    label="E-mail address"
+                    returnKeyType="done"
+                    value={email.value}
+                    onChangeText={(text) => setEmail({ value: text, error: '' })}
+                    error={!!email.error}
+                    errorText={email.error}
+                    autoCapitalize="none"
+                    autoCompleteType="email"
+                    textContentType="emailAddress"
+                    keyboardType="email-address"
+                    description="You will receive email with password reset link."
+                    />
                 </View>
-                <TouchableOpacity style={styles.resetButton} onPress={()=>{navigation.navigate("Login")}} >
+                <TouchableOpacity 
+                style={styles.resetButton} 
+                loading={loading}
+                mode="contained"
+                onPress={sendResetPasswordEmail}
+                 >
                     <Text style={styles.resetText}>Send Reset Link</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>{navigation.navigate("Signup")}}>

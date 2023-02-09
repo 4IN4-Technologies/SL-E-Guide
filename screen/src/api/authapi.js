@@ -1,6 +1,7 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import { getAuth, signInWithEmailAndPassword, signOut,createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut,createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { Alert } from 'react-native';
 
 
 export const logoutUser = () => {
@@ -38,8 +39,8 @@ export const loginUser = async ({ email, password }) => {
 
 export const sendEmailWithPassword = async (email) => {
   try {
-    await firebase.auth().sendPasswordResetEmail(email)
-    return {}
+    await sendPasswordResetEmail(getAuth(),email)
+    return (Alert.alert("Password reset mail sent"))
   } catch (error) {
     return {
       error: error.message,

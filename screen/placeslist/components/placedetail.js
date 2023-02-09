@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text,ImageBackground,StatusBar } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const statusBarHeight = StatusBar.currentHeight;
 
 function Placedetail(props) {
   const navigation =useNavigation()
@@ -28,7 +27,6 @@ function Placedetail(props) {
 
 const styles = StyleSheet.create({
   maincontainer:{
-    paddingTop:statusBarHeight
   },
   container: {
     flexDirection: "row",

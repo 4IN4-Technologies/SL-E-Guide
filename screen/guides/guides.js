@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Text, Image,Linking} from "react-native";
+import React from "react";
+import { StyleSheet, View, StatusBar, Text, Image,ImageBackground} from "react-native";
 import MaterialButtonViolet from "./components/MaterialButtonViolet";
 
 
 function Guides() {
   return (
     <View style={styles.container}>
+      <ImageBackground source={require("./assets/images/bg.png")}>
       <StatusBar animated />
       <View style={styles.rectStackStack}>
         <View style={styles.rectStack}>
@@ -48,7 +49,7 @@ function Guides() {
         <MaterialButtonViolet phoneNumber="+94764895686"
           style={styles.materialButtonViolet}
         ></MaterialButtonViolet>
-        <MaterialButtonViolet
+        <MaterialButtonViolet phoneNumber="+9478659746"
           style={styles.materialButtonViolet1}
         ></MaterialButtonViolet>
         <View style={styles.isuruJayasundaraStack}>
@@ -56,7 +57,7 @@ function Guides() {
           <Text style={styles.text2}>17+ Exp</Text>
         </View>
         <Text style={styles.topRated3}>TOP RATED</Text>
-        <MaterialButtonViolet
+        <MaterialButtonViolet phoneNumber="+94714893527"
           style={styles.materialButtonViolet2}
         ></MaterialButtonViolet>
         <View style={styles.hasankaDamithStack}>
@@ -64,10 +65,11 @@ function Guides() {
           <Text style={styles.text3}>17+ Exp</Text>
           <Text style={styles.topRated4}>TOP RATED</Text>
         </View>
-        <MaterialButtonViolet
+        <MaterialButtonViolet phoneNumber="+94747569365"
           style={styles.materialButtonViolet3}
         ></MaterialButtonViolet>
       </View>
+      </ImageBackground>
     </View>
   );
 }
@@ -75,7 +77,6 @@ function Guides() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "rgba(247,247,247,1)"
   },
   title:{
     flexDirection:"row",
@@ -126,7 +127,6 @@ const styles = StyleSheet.create({
   vishwaLakshan: {
     top: 60,
     position: "absolute",
-    fontFamily: "basic-regular",
     color: "#121212",
     height: 28,
     width: 255,
@@ -137,21 +137,18 @@ const styles = StyleSheet.create({
     top: 246,
     left: 26,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212"
   },
   loremIpsum2: {
     top: 380,
     left: 141,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212"
   },
   athulaChandradasa: {
     top: 0,
     left: 0,
     position: "absolute",
-    fontFamily: "basic-regular",
     color: "#121212",
     height: 36,
     width: 143,
@@ -161,7 +158,6 @@ const styles = StyleSheet.create({
     top: 29,
     left: 22,
     position: "absolute",
-    fontFamily: "roboto-700italic",
     color: "rgba(26,11,97,1)",
     height: 35,
     width: 130
@@ -170,7 +166,6 @@ const styles = StyleSheet.create({
     top: 57,
     left: 12,
     position: "absolute",
-    fontFamily: "alfa-slab-one-regular",
     color: "rgba(157,21,157,1)",
     height: 15,
     width: 119
@@ -186,7 +181,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 7,
     position: "absolute",
-    fontFamily: "roboto-700italic",
     color: "rgba(26,11,97,1)",
     height: 35,
     width: 130
@@ -195,7 +189,6 @@ const styles = StyleSheet.create({
     top: 28,
     left: 0,
     position: "absolute",
-    fontFamily: "alfa-slab-one-regular",
     color: "rgba(157,21,157,1)",
     height: 15,
     width: 119
@@ -225,7 +218,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     position: "absolute",
-    fontFamily: "basic-regular",
     color: "#121212",
     height: 36,
     width: 143,
@@ -235,7 +227,6 @@ const styles = StyleSheet.create({
     top: 31,
     left: 16,
     position: "absolute",
-    fontFamily: "roboto-700italic",
     color: "rgba(26,11,97,1)",
     height: 35,
     width: 130
@@ -251,7 +242,6 @@ const styles = StyleSheet.create({
     top: 453,
     left: 230,
     position: "absolute",
-    fontFamily: "alfa-slab-one-regular",
     color: "rgba(157,21,157,1)",
     height: 15,
     width: 119
@@ -267,7 +257,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     position: "absolute",
-    fontFamily: "basic-regular",
     color: "#121212",
     height: 36,
     width: 143,
@@ -277,7 +266,6 @@ const styles = StyleSheet.create({
     top: 30,
     left: 13,
     position: "absolute",
-    fontFamily: "roboto-700italic",
     color: "rgba(26,11,97,1)",
     height: 35,
     width: 130
@@ -286,7 +274,6 @@ const styles = StyleSheet.create({
     top: 57,
     left: 7,
     position: "absolute",
-    fontFamily: "alfa-slab-one-regular",
     color: "rgba(157,21,157,1)",
     height: 15,
     width: 119

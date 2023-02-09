@@ -86,11 +86,19 @@ function Main(props) {
         </View>
         <Text style={styles.transportServices}>Transport{"\n"} Services</Text>
       </View>
+      <View style={styles.bottombar}>
       <View style={styles.signoutContainer}>
         <Image source={require("../src/signout.png")} style={{height:30,width:35}}/>
         <TouchableOpacity onPress={logoutUser} >
           <Text style={{fontSize:20}}> Sign out</Text>
         </TouchableOpacity>
+      </View>
+      <View style={styles.contactUs}>
+        <Image source={require("../src/contact.png")} style={{height:30,width:35}}/>
+        <TouchableOpacity onPress={()=>{navigation.navigate("Contactus")}} >
+          <Text style={{fontSize:20}}> Contact Us</Text>
+        </TouchableOpacity>
+      </View>
       </View>
       </ScrollView>
       </ImageBackground>
@@ -248,8 +256,17 @@ const styles = StyleSheet.create({
   },
   signoutContainer:{
     flexDirection:"row",
-    marginTop:60,
+    marginTop:45,
     marginLeft:10,
+  },
+  bottombar:{
+    flexDirection:"row",
+    justifyContent:"space-between"
+  },
+  contactUs:{
+    flexDirection:"row",
+    marginTop:45,
+    marginRight:10
   }
 })
 

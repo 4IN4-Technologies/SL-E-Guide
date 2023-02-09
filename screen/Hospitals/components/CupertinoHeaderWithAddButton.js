@@ -11,8 +11,8 @@ function CupertinoHeaderWithAddButton(props) {
         </TouchableOpacity>
       </View>
       <View style={styles.textWrapper}>
-        <Text numberOfLines={1} style={styles.vehicle}>
-          Hotels
+        <Text numberOfLines={1} style={styles.hospital}>
+          Hospitals
         </Text>
       </View>
     </View>
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
     flex: 0.86,
     marginLeft:50,
   },
-  vehicle: {
+  hospital: {
     fontSize: 17,
     lineHeight: 17,
     marginLeft:50,
-    marginTop:10,
+    marginTop:15,
     color: "#000000",
     fontWeight:"bold"
   }

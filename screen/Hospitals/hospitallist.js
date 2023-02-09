@@ -1,299 +1,520 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
-import CupertinoSearchBarWithMic from "./components/CupertinoSearchBarWithMic";
-import MaterialButtonPink from "./components/MaterialButtonPink";
-import MaterialButtonSuccess1 from "./components/MaterialButtonSuccess1";
+import { SafeAreaView, ScrollView, StyleSheet, View, Text, ImageBackground,Image} from "react-native";
+import CupertinoHeaderWithAddButton from "./components/CupertinoHeaderWithAddButton";
+import MaterialButtonViolet from "./components/MaterialButtonViolet";
 
-function Hospitallist(props) {
+function Hospitallist() {
   return (
-    <View style={styles.container}>
-      <View style={styles.rect}>
-        <Text style={styles.loremIpsum}>HOSPITAL AND MEDICAL CENTERS</Text>
-      </View>
-      <CupertinoSearchBarWithMic
-        style={styles.cupertinoSearchBarWithMic}
-      ></CupertinoSearchBarWithMic>
-      <View style={styles.rect3Stack}>
-        <View style={styles.rect3}>
-          <Text style={styles.asiriHospitals4}>ASIRI HOSPITALS</Text>
-          <View style={styles.materialButtonPinkRow}>
-            <MaterialButtonPink
-              style={styles.materialButtonPink}
-            ></MaterialButtonPink>
-            <MaterialButtonSuccess1
-              style={styles.materialButtonSuccess1}
-            ></MaterialButtonSuccess1>
-          </View>
-        </View>
-        <Image
-          source={require("./assets/images/ASIRI_HOSPITAL1.jpg")}
-          resizeMode="contain"
-          style={styles.image3}
-        ></Image>
-      </View>
-      <View style={styles.rect5Stack}>
-        <View style={styles.rect5}>
-          <Text style={styles.sethSewanaHospital}>SETH SEWANA HOSPITAL</Text>
-          <View style={styles.materialButtonPink2Row}>
-            <MaterialButtonPink
-              style={styles.materialButtonPink2}
-            ></MaterialButtonPink>
-            <MaterialButtonSuccess1
-              style={styles.materialButtonSuccess12}
-            ></MaterialButtonSuccess1>
-          </View>
-        </View>
-        <Image
-          source={require("./assets/images/seth_sewana.jpg")}
-          resizeMode="contain"
-          style={styles.image4}
-        ></Image>
-      </View>
-      <View style={styles.rect7Stack}>
-        <View style={styles.rect7}>
-          <Text style={styles.miracleHosptal2}>MIRACLE HOSPTAL</Text>
-          <View style={styles.materialButtonPink3Row}>
-            <MaterialButtonPink
-              style={styles.materialButtonPink3}
-            ></MaterialButtonPink>
-            <MaterialButtonSuccess1
-              style={styles.materialButtonSuccess13}
-            ></MaterialButtonSuccess1>
-          </View>
-        </View>
-        <Image
-          source={require("./assets/images/MIRACAL.jpg")}
-          resizeMode="contain"
-          style={styles.image5}
-        ></Image>
-      </View>
-      <View style={styles.rect8Stack}>
-        <View style={styles.rect8}>
-          <Text style={styles.hemasHospital}>HEMAS HOSPITAL</Text>
-          <View style={styles.materialButtonPink4Row}>
-            <MaterialButtonPink
-              style={styles.materialButtonPink4}
-            ></MaterialButtonPink>
-            <MaterialButtonSuccess1
-              style={styles.materialButtonSuccess14}
-            ></MaterialButtonSuccess1>
-          </View>
-        </View>
-        <Image
-          source={require("./assets/images/HEMAS.jpg")}
-          resizeMode="contain"
-          style={styles.image6}
-        ></Image>
-      </View>
-    </View>
+<SafeAreaView style={{flex:1}}>  
+
+<View style={styles.container}>
+<CupertinoHeaderWithAddButton style={styles.cupertinoHeaderWithAddButton}></CupertinoHeaderWithAddButton>
+<ScrollView >
+<ImageBackground source={require('./assets/bg.png')}>  
+          
+<View style={styles.rect2}><Text>COLOMBO</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Asiri Medical Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://www.asirihealth.com/imgup/surgical-hospital/1.jpg"}}/>
+<View>
+<Text style={styles.plist}>                  
+181, Kirula Road,{'\n'} 
+Narahenpita,Colombo{'\n'}
++94114523300</Text>
+<MaterialButtonViolet phoneNumber="+94114523300" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Park Hospitals</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th?id=AobS4O8ZnwQP/cA480x360&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>                  
+Park Road, Colombo{'\n'}
++94 112 590 200</Text>
+<MaterialButtonViolet phoneNumber="+94112590200" />
+</View>
+</View>  
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>National Hospital of Sri Lanka</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://www.nawaloka.com/image/catalog/package/general-surgery-lap-appendicectomy.jpg"}}/>
+<View>
+<Text style={styles.plist}>                  
+Nawam Mawatha,{'\n'}  
+Jetwing House II,{'\n'} 
+Colombo {'\n'} 
++94 112 698 847</Text>
+<MaterialButtonViolet phoneNumber="+94112698847" />
+</View>
+</View>  
+</View>
+
+<View style={styles.rect2}><Text>KURUNEGALA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Miracle Health Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/A6bNUBcmpDgUNbQ480x360?&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>                  
+223, Dambulla Road,,{'\n'} 
+Kurunegala{'\n'}
++94 377 390 350
+</Text>
+<MaterialButtonViolet phoneNumber="+94377390350" />
+</View>
+</View>  
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>SETHSEVANA HOSPITAL</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/AwkNSKhJV0NmSTQ480x360?&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>                  
+No.266,Colombo Road,{'\n'} 
+Kurunegala{'\n'}
++94 372 232 365
+</Text>
+<MaterialButtonViolet phoneNumber="+94372232365" />
+</View>
+</View>  
+</View>
+
+ <View style={styles.rect2}><Text>KANDY</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Asiri Hospital Kandy</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/AsiZyzTB6DxKiug480x360?&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>                  
+907, Peradeniya Road, {'\n'} 
+Kandy{'\n'}
++94 814 528 800
+</Text>
+<MaterialButtonViolet phoneNumber="+94814528800" />
+</View>
+</View>  
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>SUWASEWANA Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://suwasevana.lk/wp-content/uploads/bfi_thumb/logo-web-2-3gx70o6yzmude45t78pclc.png"}}/>
+<View>
+<Text style={styles.plist}>                  
+532,Peradeniya Road, {'\n'} 
+Kandy{'\n'}
++94 081 2232357
+</Text>
+<MaterialButtonViolet phoneNumber="+940812232357" />
+</View>
+</View>  
+</View>
+
+ <View style={styles.rect2}><Text>ANURADHAPURA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Durdans Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/OIP.y4GHm0Q67vzMMnNyxi0JzQHaEo?pid=ImgDet&rs=1"}}/>
+<View>
+<Text style={styles.plist}>                  
+4 Kada 50,,{'\n'} 
+Bandaranayaka Mawatha{'\n'}
++94255673395
+</Text>
+<MaterialButtonViolet phoneNumber="+94255673395" />
+</View>
+</View>  
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>ROYAL RAJARATA Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/R.f3bb8f60ecf3c8038b886acf91e32ecf?rik=8wiXJ8CrDlOTYQ&pid=ImgRaw&r=0"}}/>
+<View>
+<Text style={styles.plist}>                  
+122 Airport Road,{'\n'} 
+Anuradhapura{'\n'}
++94 71 680 2228
+</Text>
+<MaterialButtonViolet phoneNumber="+94716802228" />
+</View>
+</View>  
+</View>
+
+<View style={styles.rect2}><Text>HAMBANTOTA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Ruhunu Medi Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://lh3.googleusercontent.com/p/AF1QipPuTJdAQNB0hVw50OcnrcpoWSjJcSTdWyHcG2_9=s1360-w1360-h1020"}}/>
+<View>
+<Text style={styles.plist}>                  
+23, Barack Street,{'\n'} 
+hambantota{'\n'}
++94 472 220 378</Text>
+<MaterialButtonViolet phoneNumber="+94472220378" />
+</View>
+</View>
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>District General Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://static.wixstatic.com/media/ad43bd_5445141b8b934d05a58477c89a3972cc~mv2.jpg/v1/crop/x_998,y_0,w_3610,h_2770/fill/w_845,h_649,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_7888.jpg"}}/>
+<View>
+<Text style={styles.plist}>                  
+New Road,{'\n'}
+ Hambantota{'\n'}
++94 472 222 016</Text>
+<MaterialButtonViolet phoneNumber="+94472222016" />
+</View>
+</View>
+</View>
+
+<View style={styles.rect2}><Text>POLONNARUWA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Venus Lanka Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://th.bing.com/th?id=AYjNcZ/teOH3S2w480x360&rs=1&pid=ImgDet"}}/>
+<View>
+<Text style={styles.plist}>
+28th Mile Post,{'\n'} 
+Kaduruwela, Polonnaruwa{'\n'}
++94 272 223 205</Text>
+<MaterialButtonViolet phoneNumber="+94 272 223 205" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Shanthi Medical Centre</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/OIP.UZQbi38QETTqKNyX9Bt1AQHaDN?pid=ImgDet&rs=1"}}/>
+<View>
+<Text style={styles.plist}>                  
+347, Maradankadawala,{'\n'}
+Habarana,{'\n'}
++94272222356</Text>
+<MaterialButtonViolet phoneNumber="+94272222356" />
+</View>
+</View>  
+</View>
+
+
+
+<View style={styles.rect2}><Text>AMPARA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Prabhodha Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://web.facebook.com/prabhodhaampara/photos/a.379738465538632/1464116893767445/?__tn__=%3C"}}/>
+<View>
+<Text style={styles.plist}>
+Pandukabaya Mawatha,{'\n'} 
+Ampara{'\n'}
++94 634 672 672</Text>
+<MaterialButtonViolet phoneNumber="+94634672672" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>District General Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://th.bing.com/th?id=AbbRWjBHpK%2bZWhw480x360&pid=ImgDet&rs=1"}}/>
+<View>
+<Text style={styles.plist}>
+Street,{'\n'} 
+Ampara{'\n'}
++94 632 222 261</Text>
+<MaterialButtonViolet phoneNumber="+94632222261" />
+</View>
+</View> 
+</View>
+
+
+<View style={styles.rect2}><Text>BADULLE</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Central Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://th.bing.com/th/id/R.9fec2bb470dbb505fbc0f0a95ef56ef2?rik=fWXSJRuQD1Qcjg&pid=ImgRaw&r=0"}}/>
+<View>
+<Text style={styles.plist}>
+No:12,Ward St,{'\n'} 
+Badulla{'\n'}
++94 552 222 164</Text>
+<MaterialButtonViolet phoneNumber="+94552222164" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Perlin Pvt Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://photos.wikimapia.org/p/00/01/61/04/40_big.jpg"}}/>
+<View>
+<Text style={styles.plist}>                  
+35 Bandarawela Rd,{'\n'}
+Badulla{'\n'}
+055-2222800</Text>
+<MaterialButtonViolet phoneNumber="+0552222800" />
+</View>
+</View>  
+</View>
+
+
+<View style={styles.rect2}><Text>Galle</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>
+Ruhunu Hospital
+</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://th.bing.com/th/id/R.9e302ae43a26c296fedd0315be42e136?rik=d1krZIe2wkyTzQ&pid=ImgRaw&r=0"}}/>
+<View>
+<Text style={styles.plist}>
+Inland Hill Rd,{'\n'} 
+Galle{'\n'}
++94 917 694 059</Text>
+<MaterialButtonViolet phoneNumber="+94917694059" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Asiri Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/R.4afbeb122f6f6b38046c4ee652d28623?rik=QASWMABRtsZjuw&pid=ImgRaw&r=0"}}/>
+<View>
+<Text style={styles.plist}>                  
+No.10 Wakwella Rd{'\n'}
+Galle{'\n'}
++94 914 640 640</Text>
+<MaterialButtonViolet phoneNumber="+94914640640" />
+</View>
+</View>  
+</View>
+
+
+<View style={styles.rect2}><Text>MATARA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Asiri Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://promolkwebsite.blob.core.windows.net/profiles/promo.lk-promo-43277a5ef91d4535854988b82bfee1ba.jpg"}}/>
+<View>
+<Text style={styles.plist}>
+Street,{'\n'} 
+Matara{'\n'}
++94 417 501 501</Text>
+<MaterialButtonViolet phoneNumber="+94417501501" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>District General Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://lh3.googleusercontent.com/p/AF1QipOVCwWXGp7vi4cqqQSMplHOoq58wUxQg1FvSZMO=s1600-w400"}}/>
+<View>
+<Text style={styles.plist}>                  
+Edmond Samarasekara Mw,{'\n'}
+Matara{'\n'}
++94 412 222 261</Text>
+<MaterialButtonViolet phoneNumber="+94412222 61" />
+</View>
+</View>  
+</View>
+
+
+<View style={styles.rect2}><Text>NUWARA ELIYA</Text></View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Ideal Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://english.lankapuvath.lk/wp-content/uploads/2019/07/Nuwara-Eliya-Hospital.jpg"}}/>
+<View>
+<Text style={styles.plist}>
+Park Rd,{'\n'} 
+Nuwara Eliya{'\n'}
++94 522 223 050</Text>
+<MaterialButtonViolet phoneNumber="+94522223050" />
+</View>
+</View> 
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>General Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://th.bing.com/th/id/OIP.X0IAFpDhgoUucv8_KwE6JQHaEK?pid=ImgDet&rs=1"}}/>
+<View>
+<Text style={styles.plist}>                  
+Hawa Eliya,{'\n'}
+Nuwara Eliya{'\n'}
++94522222261</Text>
+<MaterialButtonViolet phoneNumber="+94522222261" />
+</View>
+</View>  
+</View>
+
+<View style={styles.rect2}><Text>RATNAPURA</Text></View>
+<View style={styles.list}>
+<Text style={styles.hlist}>Aloka Private Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://lh5.googleusercontent.com/p/AF1QipP6YsyqHBLRyiWYGlNqbd8Qfm3eypk48VGLGqG_=w500-h500-k-no"}}/>
+<View>
+<Text style={styles.plist}>                  
+Inner Circular Rd,{'\n'} 
+Ratnapura{'\n'}
++94 452 223 200</Text>
+<MaterialButtonViolet phoneNumber="+94452223200" />
+</View>
+</View>
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Arya Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://www.premium.lk/images/premium/projects/arya/1.jpg"}}/>
+<View>
+<Text style={styles.plist}>                  
+No.189 Colombo Rd,{'\n'}
+Ratnapura{'\n'}
++94 452 233 133</Text>
+<MaterialButtonViolet phoneNumber="+94452233133" />
+</View>
+</View>
+</View>
+
+<View style={styles.rect2}><Text>MATALE</Text></View>
+<View style={styles.list}>
+<Text style={styles.hlist}>Matale Nursing Home</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://lh3.googleusercontent.com/p/AF1QipPuTJdAQNB0hVw50OcnrcpoWSjJcSTdWyHcG2_9=s1360-w1360-h1020"}}/>
+<View>
+<Text style={styles.plist}>                  
+95A Kandy Rd,{'\n'} 
+Matale{'\n'}
++94 662 222 460</Text>
+<MaterialButtonViolet phoneNumber="+94662222460" />
+</View>
+</View>
+</View>
+
+<View style={styles.list}>
+<Text style={styles.hlist}>Kumudu Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}} source={{uri:"https://kumuduhospital.lk/wp-content/uploads/2020/02/web_logo_new-1.png"}}/>
+<View>
+<Text style={styles.plist}>                  
+Kandy-Jaffna Highway,{'\n'}
+Matale{'\n'}
++94 662 222 244</Text>
+<MaterialButtonViolet phoneNumber="+94662222244" />
+</View>
+</View>
+</View>
+
+
+<View style={styles.rect2}><Text>TRINCOMALEE</Text></View>
+<View style={styles.list}>
+<Text style={styles.hlist}>RCeymed Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://www.ceymed.lk/wp-content/themes/ceymed/images/logo.png"}}/>
+<View>
+<Text style={styles.plist}>                  
+677 Road,{'\n'} 
+Trincomalee{'\n'}
++94 264 595 444</Text>
+<MaterialButtonViolet phoneNumber="+94264595444" />
+</View>
+</View> 
+</View>
+
+<View style={styles.rect2}><Text>JAFFNA</Text></View>
+<View style={styles.list}>
+<Text style={styles.hlist}>STS Hospital</Text>
+<View style={styles.detailslist}>
+<Image style={{width:100,height:100,}}source={{uri:"https://lh3.googleusercontent.com/p/AF1QipNueinDUB83ofB3M11Q4NCLW80GwxsM9vzd1oJA=s1600-h380"}}/>
+<View>
+<Text style={styles.plist}>                  
+130 1st Cross St,{'\n'} 
+Jaffna{'\n'}
++94 212 226 611</Text>
+<MaterialButtonViolet phoneNumber="+94212226611" />
+</View>
+</View> 
+</View>
+
+
+
+</ImageBackground>   
+</ScrollView> 
+</View>   
+</SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "rgba(247,247,247,1)"
   },
-  rect: {
-    width: 278,
-    height: 46,
-    backgroundColor: "rgba(142,6,113,1)",
-    borderRadius: 33,
-    marginTop: 67,
-    marginLeft: 63
-  },
-  loremIpsum: {
-    color: "rgba(255,255,255,1)",
-    height: 25,
-    width: 220,
-    fontSize: 17,
-    marginTop: 12,
-    marginLeft: 36
-  },
-  cupertinoSearchBarWithMic: {
-    height: 32,
-    width: 359,
-    marginTop: 7,
+  
+  cupertinoHeaderWithAddButton: {
+    height: 44,
+    width: 380,
+    opacity: 0.55,
+    marginTop: 10,
+    backgroundColor:"#ffffff",
     alignSelf: "center"
   },
-  rect3: {
-    top: 0,
-    left: 12,
-    width: 343,
-    height: 115,
-    position: "absolute",
-    backgroundColor: "#E6E6E6"
+    rect2: {
+    width: 400,
+    height: 24,
+    backgroundColor: "#cc66ff"
   },
-  asiriHospitals4: {
-    color: "#121212",
-    height: 32,
-    width: 117,
-    marginTop: 17,
-    marginLeft: 146
-  },
-  materialButtonPink: {
-    height: 36,
-    width: 100
-  },
-  materialButtonSuccess1: {
-    height: 36,
-    width: 80,
-    marginLeft: 6,
-    marginTop: 1
-  },
-  materialButtonPinkRow: {
-    height: 37,
-    flexDirection: "row",
-    marginTop: 6,
-    marginLeft: 143,
-    marginRight: 14
-  },
-  image3: {
-    top: 17,
-    left: 0,
-    width: 158,
-    height: 87,
-    position: "absolute"
-  },
-  rect3Stack: {
-    width: 355,
-    height: 115,
-    marginTop: 13,
-    marginLeft: 10
-  },
-  rect5: {
-    top: 0,
-    left: 12,
-    width: 343,
-    height: 125,
-    position: "absolute",
-    backgroundColor: "#E6E6E6"
-  },
-  sethSewanaHospital: {
-    color: "#121212",
-    height: 32,
-    width: 164,
-    marginTop: 23,
-    marginLeft: 145
-  },
-  materialButtonPink2: {
-    height: 36,
-    width: 100
-  },
-  materialButtonSuccess12: {
-    height: 36,
-    width: 80,
-    marginLeft: 4
-  },
-  materialButtonPink2Row: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 7,
-    marginLeft: 146,
-    marginRight: 13
-  },
-  image4: {
-    top: 9,
-    left: 0,
-    width: 148,
-    height: 98,
-    position: "absolute"
-  },
-  rect5Stack: {
-    width: 355,
-    height: 125,
-    marginTop: 22,
-    marginLeft: 9
-  },
-  rect7: {
-    top: 0,
-    left: 19,
-    width: 342,
-    height: 129,
-    position: "absolute",
-    backgroundColor: "#E6E6E6"
-  },
-  miracleHosptal2: {
-    color: "#121212",
-    height: 32,
-    width: 164,
-    marginTop: 16,
-    marginLeft: 145
-  },
-  materialButtonPink3: {
-    height: 36,
-    width: 100
-  },
-  materialButtonSuccess13: {
-    height: 36,
-    width: 80,
-    marginLeft: 5
-  },
-  materialButtonPink3Row: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 16,
-    marginLeft: 144,
-    marginRight: 13
-  },
-  image5: {
-    top: 7,
-    left: -1,
-    width: 165,
-    height: 114,
-    position: "absolute"
-  },
-  rect7Stack: {
-    width: 361,
-    height: 129,
-    marginTop: 25,
-    marginLeft: 3
-  },
-  rect8: {
-    top: 8,
-    left: 0,
-    width: 342,
-    height: 132,
-    position: "absolute",
-    backgroundColor: "#E6E6E6"
-  },
-  hemasHospital: {
-    fontFamily: "alata-regular",
-    color: "#121212",
-    height: 32,
-    width: 164,
-    marginTop: 25,
-    marginLeft: 146
-  },
-  materialButtonPink4: {
-    height: 36,
-    width: 100
-  },
-  materialButtonSuccess14: {
-    height: 36,
-    width: 80,
-    marginLeft: 5
-  },
-  materialButtonPink4Row: {
-    height: 36,
-    flexDirection: "row",
-    marginTop: 13,
-    marginLeft: 144,
-    marginRight: 13
-  },
-  image6: {
-    top: 0,
-    left: 10,
-    width: 109,
-    height: 156,
-    position: "absolute"
-  },
-  rect8Stack: {
-    width: 342,
-    height: 156,
-    marginTop: 21,
-    marginLeft: 22
-  }
+  list:{
+    backgroundColor: '#ffffff',
+    padding:0,
+    marginHorizontal:10,
+    marginVertical:10,
+    height: 175,
+    width: 370,
+    borderRadius:10
+    },
+    hlist:{
+    fontSize:18,
+    color:"blue",
+    marginLeft:120,
+    fontWeight:'bold'
+    },
+    plist:{
+    fontSize:13,
+    fontWeight:'bold',
+    color:'green',
+    },
+    detailslist:{
+      flexDirection:"row",
+      marginVertical:30,
+      marginHorizontal:15,
+      justifyContent:"space-between"
+    }
+
+
 });
 
 export default Hospitallist;

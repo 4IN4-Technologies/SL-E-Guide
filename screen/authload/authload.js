@@ -1,7 +1,5 @@
-import React from 'react'
-import { ActivityIndicator } from 'react-native'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { Text,View } from 'react-native';
+
 
 
 export default function Authload({ navigation }){

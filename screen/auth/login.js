@@ -77,7 +77,7 @@ const Login = ()=>{
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>{navigation.navigate("Reset")}}>
                     <Text style={styles.forgotPass}>Forgot Password?</Text>
-                </TouchableOpacity>
+                 </TouchableOpacity>
                 <Text style={{textAlign:'center' ,padding:10}}>Or</Text>
                 <Text style={{textAlign:"left",paddingLeft:10}}>No account?</Text>
                 <TouchableOpacity loading={loading} onPress={()=>{navigation.navigate("Signup")}} >
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     },
     bgimg:{
         width: '100%',
-        height: window.height,
+        height: 850,
         resizeMode: 'contain',
     },
     formInput:{
