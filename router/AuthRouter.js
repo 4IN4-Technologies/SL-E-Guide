@@ -8,16 +8,23 @@ import Main from "../screen/main/main";
 import Places from "../screen/placeslist/placelistshow";
 import Authload from "../screen/authload/authload";
 import Emergency from "../screen/emergency/emergency menu";
-import Hospitallist from "../screen/Hospitals/hospitallist";
-import Guides from "../screen/guides/guides";
+import GuideList from "../screen/guides/guides";
 import Fuel from "../screen/fuelstations/fuel";
 import EmergencyContact from "../screen/emergency contacts/emergencycontact";
 import Tips from "../screen/Tips/tips";
-import Hotels from "../screen/hotels/hotels";
 import Transport from "../screen/Transport list/transport";
 import Drivers from "../screen/Drivers/drivers";
 import Vehicles from "../screen/Vehicles/vehicles";
 import Contactus from "../screen/contact us/contactUs";
+import AddDrivers from "../screen/AdminHandle/addDrivers";
+import AdminPage from "../screen/AdminHandle/adminPage";
+import { AddGuidesScreen } from "../screen/AdminHandle/addGuides";
+import { AddDriversScreen } from "../screen/AdminHandle/addDriver";
+import { AddHospitalScreen } from "../screen/AdminHandle/addHospital";
+import { AddHotelScreen } from "../screen/AdminHandle/addHotel";
+import HotelList from "../screen/hotels/hotelList";
+import HospitalList from "../screen/Hospitals/hospitallist";
+import { AddVehicleScreen } from "../screen/AdminHandle/addVehicle";
 import {
 Adam, 
 Ambuluwawa,
@@ -52,6 +59,7 @@ Yapahuwa
 
 
 
+
 const Stack = createNativeStackNavigator();
 
 
@@ -65,18 +73,25 @@ export function Authscreens(){
         <Stack.Screen name="Signup" component={SignUp} options={{headerShown:false}}/>
         <Stack.Screen name="Reset" component={Reset} options={{headerShown:false}}/>
         <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
+        <Stack.Screen name="AddDrivers" component={AddDrivers} options={{headerShown:false}}/>
         <Stack.Screen name="Dash" component={Main} options={{headerShown:false}}/>
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown:false}}/>
-        <Stack.Screen name="Hospital" component={Hospitallist} options={{headerShown:false}}/>
-        <Stack.Screen name="Guides" component={Guides} options={{headerShown:false}}/>
+        <Stack.Screen name="Hospital" component={HospitalList} options={{headerShown:false}}/>
+        <Stack.Screen name="Guides" component={GuideList} options={{headerShown:false}}/>
         <Stack.Screen name="Fuel" component={Fuel} options={{headerShown:false}}/>
         <Stack.Screen name="EmergencyContact" component={EmergencyContact} options={{headerShown:false}}/>
         <Stack.Screen name="Tips" component={Tips} options={{headerShown:false}}/>
         <Stack.Screen name="Transport" component={Transport} options={{headerShown:false}}/>
-        <Stack.Screen name="Hotels" component={Hotels} options={{headerShown:false}}/>
         <Stack.Screen name="Drivers" component={Drivers} options={{headerShown:false}}/>
         <Stack.Screen name="Vehicles" component={Vehicles} options={{headerShown:false}}/>
         <Stack.Screen name="Contactus" component={Contactus} options={{headerShown:false}}/>
+        <Stack.Screen name="AdminPage" component={AdminPage} options={{headerShown:false}}/>
+        <Stack.Screen name="Add Driver" component={AddDriversScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Add Guide" component={AddGuidesScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Add Hotel" component={AddHotelScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Add Hospital" component={AddHospitalScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="HotelList" component={HotelList} options={{headerShown:false}}/>
+        <Stack.Screen name="Add Vehicle" component={AddVehicleScreen} options={{headerShown:false}}/>
 
 
 

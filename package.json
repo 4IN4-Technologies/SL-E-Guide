@@ -1,5 +1,5 @@
 {
-  "name": "fuelapp",
+  "name": "sleguide",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -18,13 +18,14 @@
     "@react-navigation/native-stack": "^6.6.2",
     "expo": "^47.0.0",
     "expo-font": "~11.0.1",
+    "expo-location": "~15.0.1",
     "expo-status-bar": "~1.4.2",
     "expo-updates": "~0.15.6",
     "firebase": "^9.15.0",
     "json5": "^2.2.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-native": "0.70.5",
+    "react-native": "0.70.8",
     "react-native-gesture-handler": "~2.8.0",
     "react-native-image-slider-box": "megamaxs1234/react-native-image-slider-box",
     "react-native-location": "^2.5.0",
@@ -36,8 +37,7 @@
     "react-native-status-bar-height": "^2.6.0",
     "react-native-web": "~0.18.7",
     "react-navigation": "^4.4.4",
-    "yarn": "^1.22.19",
-    "expo-location": "~15.0.1"
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3"

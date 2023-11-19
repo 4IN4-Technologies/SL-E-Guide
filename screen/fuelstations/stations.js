@@ -459,6 +459,34 @@ const Stations=[
         "address": "A9",
         "longitude": 80.53036132721252,
         "latitude":9.05277516184095
+    },
+    {
+        "id":67,
+        "name": "Nawinna Lanka Filling Station",
+        "address": "F9J6+M6H, 3 වන පටුමග, Kurunegala 60000",
+        "longitude":80.3605772837869,
+        "latitude": 7.481625712514647, 
+    },
+    {
+        "id":68,
+        "name": "Wilgoda fueling station",
+        "address": "F9Q2+H46, Millls Rd, West",
+        "longitude": 80.35016896757368,
+        "latitude":7.488986423913656, 
+    },
+    {
+        "id":69,
+        "name": "Nelson Filling Station",
+        "address": "Kurunegala-Narammala-Madampe Rd, Kurunegala",
+        "longitude": 80.35364511130022,
+        "latitude":7.48311458466398, 
+    },
+    {
+        "id":70,
+        "name": "Lanka IOC Fuel Station",
+        "address": "F9P8+2W9, A10, Kurunegala",
+        "longitude": 80.36730238291364,
+        "latitude":7.485262623061335, 
     }
 ];
 

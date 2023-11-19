@@ -44,7 +44,7 @@ function Main(props) {
           </View>
           <Text style={styles.places}>Places</Text>
           <View style={styles.image5Row}>
-            <TouchableOpacity onPress={()=>{navigation.navigate("Hotels")}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate("HotelList")}}>
             <Image
               source={require("../../assets/Images/hotel.png")}
               resizeMode="contain"
@@ -109,6 +109,7 @@ function Main(props) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
+    height: "100%",
     flexDirection:"column"
   },
   slEGuide: {
