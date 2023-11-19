@@ -9,7 +9,7 @@ import { signUpUser } from "../src/api/authapi";
 const SignUp = ()=>{ 
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
-    const [confirmpassword, setConfirmpassword] = useState({value:'',error: ''})
+    const [confirmPassword, setConfirmPassword] = useState({value:'',error: ''})
     const [loading, setLoading] = useState()
     const [error, setError] = useState() 
            
@@ -18,10 +18,14 @@ const SignUp = ()=>{
     const onSignUpPressed = async () => {
         const emailError = emailValidator(email.value)
         const passwordError = passwordValidator(password.value)
+        if (password.value !== confirmPassword.value) {
+            setConfirmPassword({ ...confirmPassword, error: 'Passwords do not match' });
+            return (Alert.alert("Passwords not matching"));
+          }
         if (emailError || passwordError) {
           setEmail({ ...email, error: emailError })
           setPassword({ ...password, error: passwordError })
-          return
+          return(Alert.alert("Check if email and password are valid"))
         }
         setLoading(true)
         const response = await signUpUser({
@@ -71,7 +75,12 @@ const SignUp = ()=>{
                     />
                 </View>
                 <View style={styles.formInput}>
-                    <TextInput style={styles.textInput} placeholder="Confirm password" secureTextEntry={true}/>
+                    <TextInput style={styles.textInput} 
+                    placeholder="Confirm password" 
+                    onChangeText={(text) => setConfirmPassword({ value: text, error: '' })}
+                    error={!!confirmPassword.error}
+                    errorText={confirmPassword.error}
+                    secureTextEntry={true}/>
                 </View>
                 <TouchableOpacity style={styles.signButton} onPress={onSignUpPressed}>
                     <Text style={styles.signupText}>Create</Text>
