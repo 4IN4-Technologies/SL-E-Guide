@@ -8,9 +8,12 @@ import * as Location from 'expo-location'
 
 export default function Fuel(){
     const navigation=useNavigation()
-    const[mapRegion,setmapRegion]=useState({
-
-    })
+    const [mapRegion, setMapRegion] = useState({
+        latitude: 7.478325043091921,     //put latitude of the place
+        longitude:   80.34825627932058,  //put longitude of the place
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      });
 
     const userLocation = async()=>{
         let {status}= await Location.requestForegroundPermissionsAsync();
