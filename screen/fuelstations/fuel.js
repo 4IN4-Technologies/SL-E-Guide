@@ -37,7 +37,7 @@ return(
                 <MapView style={styles.map} region={mapRegion}>
                 {Stations.map((station) => (
                     <Marker
-                        key={station.name}
+                        key={station.id}
                         coordinate={{
                             latitude: station.latitude,
                             longitude: station.longitude
