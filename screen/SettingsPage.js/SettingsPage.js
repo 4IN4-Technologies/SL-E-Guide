@@ -1,12 +1,10 @@
 import { StyleSheet, Text, View, StatusBar, Dimensions,ImageBackground, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Fontawesome from "react-native-vector-icons/FontAwesome";
-<<<<<<< Updated upstream
-=======
 import { useNavigation } from "@react-navigation/native";
 import { getAuth, signOut } from "firebase/auth";
 
->>>>>>> Stashed changes
+
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -35,8 +33,6 @@ const SettingsPage = () => {
             />
             
         </View>  
-<<<<<<< Updated upstream
-=======
         <View>
             <Text style={{fontSize:18, alignSelf:"center"}}>You are currently logged in as</Text>
             <Text style={{fontSize:18, alignSelf:"center", color:"red"}}>{user.email}</Text>
@@ -50,7 +46,6 @@ const SettingsPage = () => {
                 <Text style={{marginVertical:10, fontSize:18, fontWeight:"bold"}}>Sign Out</Text>
                 </TouchableOpacity>
         </View>
->>>>>>> Stashed changes
         </ImageBackground>   
 
   )
@@ -71,10 +66,8 @@ const styles = StyleSheet.create({
     profile:{
         alignSelf: "center",
         marginVertical:windowHeight * 0.06
-<<<<<<< Updated upstream
     }
 })
-=======
 
     },
     buttonContainer:{
@@ -95,4 +88,3 @@ const styles = StyleSheet.create({
     }
     
 })
->>>>>>> Stashed changes
