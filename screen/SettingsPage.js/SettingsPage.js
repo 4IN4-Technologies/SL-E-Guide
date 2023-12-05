@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, StatusBar, Dimensions,ImageBackground } from 'react-native'
 import React from 'react'
 import Fontawesome from "react-native-vector-icons/FontAwesome";
+Sheshan
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+=======
+main
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -21,6 +24,7 @@ const SettingsPage = () => {
             />
             
         </View>  
+Sheshan
         <View>
             <Text style={{fontSize:18, alignSelf:"center"}}>You are currently logged in as</Text>
             
@@ -33,6 +37,8 @@ const SettingsPage = () => {
                 <Text style={{marginVertical:10, fontSize:18, fontWeight:"bold"}}>Sign Out</Text>
                 </TouchableOpacity>
         </View>
+=======
+main
         </ImageBackground>   
 
   )
@@ -53,6 +59,7 @@ const styles = StyleSheet.create({
     profile:{
         alignSelf: "center",
         marginVertical:windowHeight * 0.06
+Sheshan
     },
     buttonContainer:{
         marginTop:windowHeight * 0.2,
@@ -72,3 +79,7 @@ const styles = StyleSheet.create({
     }
     
 })
+=======
+    }
+})
+main
