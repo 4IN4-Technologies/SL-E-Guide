@@ -11,9 +11,6 @@ function Transport() {
 <ImageBackground source={require('../src/bg.png')} style={{height:1000, alignItems:"center"}}> 
 <Text style={styles.title}>Transport</Text> 
 
-<View style={styles.image1Stack}>       
-<VehiclesButton style={styles.cupertinoButtonBlackTextColor}/>
-</View>
       <Image
         source={require("./assets/tservice.png")}
         resizeMode="contain"
@@ -60,6 +57,7 @@ const styles = StyleSheet.create({
     marginVertical:20
   
   }
+
 
 });
 

@@ -5,7 +5,6 @@ import { useNavigation } from "@react-navigation/native";
 import { getAuth, signOut } from "firebase/auth";
 
 
-
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
@@ -33,6 +32,7 @@ const SettingsPage = () => {
             />
             
         </View>  
+
         <View>
             <Text style={{fontSize:18, alignSelf:"center"}}>You are currently logged in as</Text>
             <Text style={{fontSize:18, alignSelf:"center", color:"red"}}>{user.email}</Text>
@@ -66,8 +66,6 @@ const styles = StyleSheet.create({
     profile:{
         alignSelf: "center",
         marginVertical:windowHeight * 0.06
-    }
-})
 
     },
     buttonContainer:{
@@ -88,3 +86,4 @@ const styles = StyleSheet.create({
     }
     
 })
+
