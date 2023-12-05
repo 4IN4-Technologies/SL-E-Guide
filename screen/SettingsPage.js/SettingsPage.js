@@ -1,16 +1,24 @@
-import { StyleSheet, Text, View, StatusBar, Dimensions,ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Dimensions,ImageBackground, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Fontawesome from "react-native-vector-icons/FontAwesome";
-Sheshan
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from "@react-navigation/native";
+import { getAuth, signOut } from "firebase/auth";
 
-=======
-main
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const SettingsPage = () => {
+    const navigation = useNavigation();
+    const auth = getAuth();
+    const handleSignOut=()=>{
+        signOut(auth).then(() => {
+          alert("Sign-out successful");
+        }).catch((error) => {
+          alert("An error happened");
+        });
+        }
+    const user = auth.currentUser;
   return (
 
         <ImageBackground source={require("../../assets/Images/bg.png")} style={{ flex: 1, paddingTop: StatusBar.currentHeight || 0 }}>
@@ -24,21 +32,20 @@ const SettingsPage = () => {
             />
             
         </View>  
-Sheshan
+
         <View>
             <Text style={{fontSize:18, alignSelf:"center"}}>You are currently logged in as</Text>
+            <Text style={{fontSize:18, alignSelf:"center", color:"red"}}>{user.email}</Text>
             
         </View>
         <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={()=>{navigation.navigate("Contactus")}}>
                 <Text style={{marginVertical:10, fontSize:18, fontWeight:"bold"}}>Contact Us</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnSignOut}>
+            <TouchableOpacity style={styles.btnSignOut} onPress={handleSignOut}>
                 <Text style={{marginVertical:10, fontSize:18, fontWeight:"bold"}}>Sign Out</Text>
                 </TouchableOpacity>
         </View>
-=======
-main
         </ImageBackground>   
 
   )
@@ -59,7 +66,7 @@ const styles = StyleSheet.create({
     profile:{
         alignSelf: "center",
         marginVertical:windowHeight * 0.06
-Sheshan
+
     },
     buttonContainer:{
         marginTop:windowHeight * 0.2,
@@ -79,7 +86,4 @@ Sheshan
     }
     
 })
-=======
-    }
-})
-main
+
