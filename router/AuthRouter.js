@@ -25,6 +25,8 @@ import { AddHotelScreen } from "../screen/AdminHandle/addHotel";
 import HotelList from "../screen/hotels/hotelList";
 import HospitalList from "../screen/Hospitals/hospitallist";
 import { AddVehicleScreen } from "../screen/AdminHandle/addVehicle";
+import Dash from "../screen/Dash/Dash";
+import SettingsPage from "../screen/SettingsPage.js/SettingsPage";
 import {
 Adam, 
 Ambuluwawa,
@@ -92,6 +94,9 @@ export function Authscreens(){
         <Stack.Screen name="Add Hospital" component={AddHospitalScreen} options={{headerShown:false}}/>
         <Stack.Screen name="HotelList" component={HotelList} options={{headerShown:false}}/>
         <Stack.Screen name="Add Vehicle" component={AddVehicleScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Dashboard" component={Dash} options={{headerShown:false}}/>
+        <Stack.Screen name="Settings" component={SettingsPage} options={{headerShown:false}}/>
+
 
 
 
