@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function NineArch() {
 
   const images = [
     'https://th.bing.com/th/id/OIP.XaDulCJgG65jEfERSOw5KQHaFj?pid=ImgDet&rs=1',

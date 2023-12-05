@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function JaffnaFort() {
 
     const images = [
         'https://images.squarespace-cdn.com/content/v1/5a3bb03b4c326d76de73ddaa/1566405276559-Y3NJ34X05PKEAVY3JFCF/The_Common_Wanderer_jaffna_things_to_know-7.jpg',

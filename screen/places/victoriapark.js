@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function VictoriaPark() {
 
     const images = [
         'https://www.trawell.in/admin/images/upload/140958818Nuwara_Eliya_Victoria_Park.jpg',

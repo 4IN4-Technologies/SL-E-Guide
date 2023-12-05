@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView, ImageBackground} from
 import { SliderBox } from 'react-native-image-slider-box';
 
 
-export default function App() {
+export default function Templetooth() {
 
     const images = [
         'https://nexttravelsrilanka.com/wp-content/uploads/2021/01/The-Temple-of-the-Tooth-Relic.jpg',

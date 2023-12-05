@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl of the Indian Ocean</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>T</span>ravelශ්‍රී <img src="images/logo.png" style="width: 25px;"> </a>
+    
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#tourist information">Tourist Information</a>
+        <a href="#about us">About Us</a>
+        <a href="#queries">Queries</a>
+        <a href="#contact us">Contact Us</a>
+        
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+    
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Welcome to Sri Lanka</h3>
+        <p>#dicover new places with us, adventure awaits......</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/video1.mp4"></span>
+        
+    </div>
+
+    <div class="video-container">
+        <video src="images/video1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+
+<section class="todoList" id="todoList">
+
+    <h1 class="heading">
+        <span>T</span>
+        <span>O</span>
+        <span>D</span>
+        <span>O</span>
+        <span class="space"></span>
+        <span>L</span>
+        <span>I</span>
+        <span>S</span>
+        <span>T</span>
+    </h1>
+
+    <div class="row">
+
+
+
+        <style>
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            h1 {
+                padding-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" class="container">
+    
+            <div v-if="!isEditing">
+                <input type="text" v-model="todo">
+                <input type="submit" value="Add" @click="storeTodo">
+            </div>
+            <div v-else>
+                <input type="text" v-model="todo">
+                <input type="submit" value="Update" @click="updateTodo">
+            </div>
+    
+            <ol>
+                <li v-for="(todo, index) in todos">
+                    {{ todo }}
+                    <button @click="editTodo(index, todo)">Edit</button>
+                    <button @click="removeTodo(index)">Delete</button>
+                </li>
+            </ol>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                
+                data: {
+                    isEditing: false,
+                    todo: '',
+                    todos: [],
+                    selectedTodo: null
+                },
+                
+                methods: {
+                    storeTodo() {
+                        this.todos.push(this.todo)
+                        this.todo = ''
+                    },
+    
+                    removeTodo(index) {
+                        this.todos.splice(index, 1)
+                    },
+    
+                    updateTodo() {
+                        this.todos.splice(this.selectedIndex, 1, this.todo)
+                        this.todo = ''
+                        this.isEditing = false
+                    },
+    
+                    editTodo(index, todo) {
+                        this.isEditing = true
+                        this.todo = todo
+                        this.selectedIndex = index
+                    }
+                }
+            })
+        </script>
+
+    </div>
+
+</section>
+
+
+<section class="provinces" id="provinces">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>r</span>
+        <span>o</span>
+        <span>v</span>
+        <span>i</span>
+        <span>n</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/image 30.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> western </h3>
+                <p>Gangaramaya (Vihara) Buddhist Temple</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/3u3KDPAkJyRrjoKG8" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/image 26.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> central </h3>
+                <p>Temple of the Sacred Tooth Relic, Kandy</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/8fgS7BkPEhgqat9fA" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/image 12.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Southern </h3>
+                <p>Galle Dutch Fort</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/kwDAT4sJTyE1abXh6" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/image 4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Uva </h3>
+                <p>Nine Arches Bridge</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/Sb63LuNKmekCYDCW8" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/image 33.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> North Western </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/wpq1kJow8gVWENEu7" class="btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/image 41.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> sabaragamuwa </h3>
+                <p>Sri Pada / Adam's Peak</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="https://goo.gl/maps/fQ4K2ZRE9bydaccy8" class="btn">Explore</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box">
+        <img src="images/image 34.jpg" alt="">
+        <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> North Central </h3>
+            <p>Ancient City Polonnaruwa</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="https://goo.gl/maps/TJC6DPpjkUoc2kVb9" class="btn">Explore</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="box">
+    <img src="images/image 35.jpg" alt="">
+    <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Northern </h3>
+        <p>Nallur Kovil, Jaffna</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+        <a href="https://goo.gl/maps/Kyuov3X8R26xK21V7" class="btn">Explore</a>
+    </div>
+</div>
+
+</div>
+
+<div class="box">
+    <img src="images/image 36.jpg" alt="">
+    <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Eastern </h3>
+        <p>Pasikuda Beachside</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+        <a href="https://goo.gl/maps/M5cprHk8RLHvbLdYA" class="btn">Explore</a>
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>All good hotels tend to lead people to do things they wouldn't necessarily do at home.!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Good restaurant design is about achieving equilibrium between the food, service, and design in effect, telling a complete story.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safty guide</h3>
+            <p>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+        </div>
+        
+
+</section>
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/image 2.jpg" alt="">
+            <div class="content">
+                <h3>surfing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/image 27.jpg" alt="">
+            <div class="content">
+                <h3>Ancient places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/image 28.jpg" alt="">
+            <div class="content">
+                <h3>Village Food</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/image 16.jpg" alt="">
+            
+        </div>
+        <div class="box">
+            <img src="images/image 20.jpg" alt="">
+           
+        </div>
+        <div class="box">
+            <img src="images/image 31.jpg" alt="">
+           
+        </div>
+        <div class="box">
+            <img src="images/image 5.jpg" alt="">
+            
+        </div>
+        <div class="box">
+            <img src="images/image 9.jpg" alt="">
+            
+        </div>
+        <div class="box">
+            <img src="images/image 22.jpg" alt="">
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/image 54.jpg" alt="">
+        </div>
+
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Travel is the main thing you purchase that makes you more extravagant”. We, at ‘Organization Name’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">Gampaha</a>
+            <a href="#">Colombo</a>
+            <a href="#">Galle</a>
+            <a href="#">Polonnaruwa</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">Tourist Information</a>
+            <a href="#">provinces</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/">facebook</a>
+            <a href="https://www.instagram.com/accounts/login/">instagram</a>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">twitter</a>
+            <a href="https://www.linkedin.com/feed/">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> Sheshan MC</span> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js.js"></script>
+
+</body>
+</html>
